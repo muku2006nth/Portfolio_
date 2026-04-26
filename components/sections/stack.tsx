@@ -2,7 +2,6 @@
 
 import { useLanguage } from "@/context/language-context";
 import { BlurReveal } from "@/components/blur-reveal";
-import Image from "next/image";
 import {
     HoverCard,
     HoverCardContent,
@@ -23,7 +22,7 @@ export default function Stack() {
     const { content } = useLanguage();
 
     return (
-        <section className="w-full bg-background text-foreground overflow-hidden relative py-16 md:py-24 lg:py-32 xl:py-40 2xl:py-36">  
+        <section className="w-full bg-background text-foreground overflow-hidden relative py-16 md:py-24 lg:py-32 xl:py-40 2xl:py-36">
 
             <div className="h-full flex flex-col px-container container mx-auto">
                 <div className="flex flex-col gap-4 mb-16">
@@ -60,7 +59,7 @@ export default function Stack() {
                                                 <HoverCardTrigger asChild>
                                                     <div className="group flex items-center gap-3 py-2.5 px-1 shrink-0 cursor-default">
                                                         <div className="transition-all duration-500 ease-out opacity-50 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110">
-                                                            <Image src={item.icon} alt={item.name} width={20} height={20} />
+                                                            <img src={item.icon} alt={item.name} width={20} height={20} />
                                                         </div>
                                                         <span className="text-sm tracking-wide text-muted-foreground transition-colors duration-500 ease-out group-hover:text-foreground">
                                                             {item.name}
@@ -76,7 +75,7 @@ export default function Stack() {
                                                     <div className="absolute inset-0 bg-linear-to-tr from-foreground/5 to-transparent pointer-events-none" />
 
                                                     <div className="relative p-3 rounded-xl bg-secondary/50 ring-1 ring-border/50 shadow-inner group-hover:scale-110 transition-transform duration-500">
-                                                        <Image src={item.icon} alt={item.name} width={36} height={36} className="drop-shadow-lg" />
+                                                        <img src={item.icon} alt={item.name} width={36} height={36} className="drop-shadow-lg" />
                                                     </div>
                                                     <div className="flex flex-col items-center justify-center gap-1 z-10">
                                                         <span className="text-sm font-bold tracking-[0.15em] uppercase text-foreground">
