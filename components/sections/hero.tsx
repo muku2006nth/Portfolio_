@@ -9,7 +9,7 @@ import {
     useMotionTemplate,
 } from "framer-motion";
 import { BackgroundEffects } from "@/components/background-effects";
-import { ArrowRight, Mail, Mouse } from "lucide-react";
+import { ArrowRight, Mouse } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
 import { ContactModal } from "@/components/contact-modal";
 
