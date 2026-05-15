@@ -3,10 +3,10 @@
   <br />
   <br />
 
-  [![Next.js](https://img.shields.io/badge/Next.js-15+-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-  [![Three.js](https://img.shields.io/badge/Three.js-Latest-black?style=for-the-badge&logo=three.js)](https://threejs.org/)
-  [![Framer Motion](https://img.shields.io/badge/Framer_Motion-Latest-purple?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
+[![Next.js](https://img.shields.io/badge/Next.js-15+-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Three.js](https://img.shields.io/badge/Three.js-Latest-black?style=for-the-badge&logo=three.js)](https://threejs.org/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-Latest-purple?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
 
   <p align="center">
    <p><b>Kintarowwwards</b> is an interactive portfolio project built with modern web technologies and high-quality design principles. It aims to provide a user experience at Awwwards standards.</p>
@@ -48,16 +48,19 @@
 Follow the steps below to run the project in your local environment:
 
 1. **Clone the Repo:**
+
    ```bash
    git clone https://github.com/xkintaro/kintarowwwards.git
    ```
 
 2. **Enter the Directory:**
+
    ```bash
    cd kintarowwwards
    ```
 
 3. **Install Dependencies:**
+
    ```bash
    npm install
    ```
@@ -69,18 +72,16 @@ Follow the steps below to run the project in your local environment:
 
 You can view the project by visiting [http://localhost:3000](http://localhost:3000) in your browser.
 
-
 ## 🎨 Customization <a id="customize"></a>
 
-
 ### Content Update & Multi-language (i18n)
+
 Project content and language options are managed through JSON files under the `content/` directory:
+
 - `content/tr.json`: Turkish content.
 - `content/en.json`: English content.
 
 Simply edit these files to change texts, project titles, or descriptions. Components are dynamically updated using the keys in these files.
-
-
 
 ## 📄 License <a id="license"></a>
 

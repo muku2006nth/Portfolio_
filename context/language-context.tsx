@@ -5,7 +5,7 @@ import en from "@/content/en.json";
 import tr from "@/content/tr.json";
 import { STORAGE_KEYS, LOCALE_CONFIG } from "@/lib/constants";
 
-export type Content = typeof en;
+type Content = typeof en;
 export type Language = typeof LOCALE_CONFIG.SUPPORTED[number];
 
 interface LanguageContextType {
