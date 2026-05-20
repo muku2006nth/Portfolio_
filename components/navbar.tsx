@@ -2,8 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform, useMotionTemplate } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import LanguageSwitcher from "./settings/language-switcher";
 import ThemeSwitcher from "./settings/theme-switcher";
@@ -14,8 +13,14 @@ import { cn } from "@/lib/utils";
 export default function Navbar() {
   const { content } = useLanguage();
   const lenis = useLenis();
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Scroll-driven dynamic values for professional transition
+  const { scrollY } = useScroll();
+  const bgOpacity = useTransform(scrollY, [0, 400], [0, 1]);
+  const backdropBlur = useTransform(scrollY, [0, 400], [0, 16]);
+  const backdropFilter = useMotionTemplate`blur(${backdropBlur}px)`;
+  const py = useTransform(scrollY, [0, 400], [24, 12]); // py-6 (24px) to py-3 (12px)
 
   const navLinks = [
     { name: content.nav.home, href: "#home" },
@@ -25,17 +30,6 @@ export default function Navbar() {
     { name: content.nav.roadmap, href: "#roadmap" },
     { name: content.nav.contact, href: "#contact" },
   ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 220);
-    };
-
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     if (isMobileMenuOpen) {
@@ -83,36 +77,32 @@ export default function Navbar() {
   };
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 left-0 right-0 z-[100] transition-all duration-700 py-4",
-        isScrolled
-          ? "bg-background/70 backdrop-blur-xl border-b border-border/40 py-3"
-          : "bg-transparent py-6"
-      )}
+    <motion.header
+      style={{
+        paddingTop: py,
+        paddingBottom: py,
+      }}
+      className="fixed top-0 left-0 right-0 z-[100] transition-colors duration-300"
     >
-      <nav
-        className={cn(
-          "mx-auto px-container flex items-center justify-between transition-all duration-700",
-          isScrolled
-            ? "container"
-            : "max-w-full"
-        )}
-      >
+      {/* Dynamic Background and Border Overlay synchronized with Scroll */}
+      <motion.div
+        style={{
+          opacity: bgOpacity,
+          backdropFilter,
+          WebkitBackdropFilter: backdropFilter,
+        }}
+        className="absolute inset-0 bg-background/75 border-b border-border/40 -z-10 pointer-events-none"
+      />
+
+      <nav className="mx-auto px-container flex items-center justify-between w-full max-w-7xl">
         <Link
           href="#home"
           onClick={(e) => scrollToSection(e, "#home")}
           className="relative z-[110] flex items-center gap-2 group"
         >
-          <div className="relative h-8 w-8 sm:h-10 sm:w-10 overflow-hidden rounded-xl transition-transform duration-500 group-hover:scale-110">
-            <Image
-              src="/logo.png"
-              alt="Kintaro Logo"
-              fill
-              className="object-contain border border-border rounded-full"
-              priority
-            />
-          </div>
+          <span className="text-xl sm:text-2xl font-black tracking-tighter uppercase text-foreground transition-all duration-300 group-hover:opacity-70">
+            kintaro
+          </span>
         </Link>
 
         <div className="hidden xl:flex items-center gap-8">
@@ -137,8 +127,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="flex lg:hidden items-center gap-4">
-          <ThemeSwitcher />
+        <div className="flex xl:hidden items-center gap-4">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="relative z-[110] p-2 text-foreground focus:outline-none"
@@ -156,13 +145,12 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[90] bg-background xl:hidden flex flex-col h-screen w-screen"
+            className="fixed inset-0 z-[90] bg-background xl:hidden flex flex-col h-[100dvh] w-screen"
           >
-
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(var(--primary-rgb),0.05),transparent)] pointer-events-none" />
             <div className="absolute inset-0 bg-grid-white/[0.02] pointer-events-none" />
 
-            <div className="flex flex-col h-full pt-32 pb-12 px-8 overflow-y-auto relative z-10">
+            <div className="flex flex-col flex-1 pt-24 sm:pt-32 pb-24 sm:pb-12 px-container overflow-y-auto relative z-10">
               <ul className="flex flex-col gap-6 sm:gap-8">
                 {navLinks.map((link, i) => (
                   <motion.li
@@ -192,20 +180,17 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="mt-auto pt-12 border-t border-border/50 flex flex-col gap-8"
+                className="mt-auto pt-8 border-t border-border/20 flex items-center justify-between"
               >
-                <div className="flex items-center justify-between">
-                  <div className="flex flex-col gap-1">
-                    <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground">{content.others.select_language}</span>
-                    <span className="text-xs text-foreground/50">{content.others.change_the_site_language}</span>
-                  </div>
+                <div className="flex items-center gap-4">
                   <LanguageSwitcher />
+                  <ThemeSwitcher />
                 </div>
               </motion.div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </motion.header>
   );
 }
