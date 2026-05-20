@@ -81,7 +81,7 @@ export default function Hero() {
                     </motion.div>
                 </div>
 
-                <div className="max-sm:opacity-20 flex-1 h-full overflow-hidden relative">
+                <div className="max-sm:opacity-50 flex-1 h-full overflow-hidden relative">
                     <motion.div
                         animate={{ y: ["-50%", "0%"] }}
                         transition={{
