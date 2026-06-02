@@ -35,11 +35,9 @@
   <br />
 </div>
 
-## ❤️ Support
+## ❤️ Thank you for your support!
 
 Seeing this project receive stars and forks recently has made me really happy. I originally built it just for myself. I know that changing the personal information to use it in your own portfolio might be a bit inconvenient. To solve this, I'll be working on improvements to make customization easier.
-
-Thank you for your support! ❤️
 
 ## 📋 About
 

@@ -35,11 +35,9 @@
   <br />
 </div>
 
-## ❤️ Destek
+## ❤️ Desteğiniz için teşekkürler!
 
 Projemin son günlerde star ve fork alması beni mutlu etti. Aslında projeyi tamamen kendim için yapmıştım. portfolio için kişisel bilgileri değiştirmek sizin için biraz zor gelebilir. bu sorunu çözmek için geliştirmelere başlayacağım.
-
-Desteğiniz için teşekkür ederim. ❤️
 
 ## 📋 Hakkında
 
