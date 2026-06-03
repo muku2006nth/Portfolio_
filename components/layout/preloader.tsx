@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useLanguage } from "@/context/language-context";
+import { useLanguage } from "@/providers/language-provider";
 import { useTheme } from "next-themes";
 
 export function Preloader() {

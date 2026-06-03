@@ -6,10 +6,10 @@ import {
     DialogDescription,
 } from "@/components/ui/dialog";
 
-import { useLanguage } from "@/context/language-context";
+import { useLanguage } from "@/providers/language-provider";
 import { ArrowUpRight, Mail, Phone } from "lucide-react";
 import { useEffect } from "react";
-import { useLenis } from "@/components/smooth-scroll";
+import { useLenis } from "@/providers/smooth-scroll-provider";
 
 interface ContactModalProps {
     open: boolean;

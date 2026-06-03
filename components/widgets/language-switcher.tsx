@@ -1,7 +1,7 @@
 "use client";
 
 import { Check, Globe } from "lucide-react";
-import { useLanguage } from "@/context/language-context";
+import { useLanguage } from "@/providers/language-provider";
 import { LOCALE_CONFIG } from "@/lib/constants";
 
 import {

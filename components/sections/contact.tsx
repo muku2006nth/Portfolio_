@@ -1,8 +1,8 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
-import { useLanguage } from "@/context/language-context";
-import { BlurReveal } from "../blur-reveal";
+import { useLanguage } from "@/providers/language-provider";
+import { BlurReveal } from "@/components/effects/blur-reveal";
 
 export default function Contact() {
     const { content } = useLanguage();

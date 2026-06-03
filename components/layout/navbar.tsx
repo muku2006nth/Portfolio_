@@ -4,10 +4,10 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence, useScroll, useTransform, useMotionTemplate } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import LanguageSwitcher from "./settings/language-switcher";
-import ThemeSwitcher from "./settings/theme-switcher";
-import { useLanguage } from "@/context/language-context";
-import { useLenis } from "@/components/smooth-scroll";
+import LanguageSwitcher from "@/components/widgets/language-switcher";
+import ThemeSwitcher from "@/components/widgets/theme-switcher";
+import { useLanguage } from "@/providers/language-provider";
+import { useLenis } from "@/providers/smooth-scroll-provider";
 
 export default function Navbar() {
   const { content } = useLanguage();

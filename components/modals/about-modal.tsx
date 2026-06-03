@@ -6,8 +6,8 @@ import {
 } from "@/components/ui/dialog";
 
 import { useEffect } from "react";
-import { useLanguage } from "@/context/language-context";
-import { useLenis } from "@/components/smooth-scroll";
+import { useLanguage } from "@/providers/language-provider";
+import { useLenis } from "@/providers/smooth-scroll-provider";
 
 interface AboutModalProps {
     open: boolean;

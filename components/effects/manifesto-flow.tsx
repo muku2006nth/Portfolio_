@@ -1,6 +1,6 @@
 "use client";
 
-import { useLanguage } from "@/context/language-context";
+import { useLanguage } from "@/providers/language-provider";
 
 export default function ManifestoFlow({ reverse = false }: { reverse?: boolean }) {
   const { content } = useLanguage();

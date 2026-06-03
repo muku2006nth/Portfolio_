@@ -3,8 +3,8 @@
 import { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { BlurReveal } from "@/components/blur-reveal";
-import { useLanguage } from "@/context/language-context";
+import { BlurReveal } from "@/components/effects/blur-reveal";
+import { useLanguage } from "@/providers/language-provider";
 
 export default function Roadmap() {
     const containerRef = useRef<HTMLDivElement>(null);

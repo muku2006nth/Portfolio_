@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Inter, Syne } from "next/font/google";
 import "./globals.css";
-import SmoothScroll from "@/components/smooth-scroll";
-import { ThemeProvider } from "@/components/theme-provider";
-import { LanguageProvider } from "@/context/language-context";
-import { Preloader } from "@/components/preloader";
-import { CustomCursor } from "@/components/custom-cursor";
-import Navbar from "@/components/navbar";
+import SmoothScroll from "@/providers/smooth-scroll-provider";
+import { ThemeProvider } from "@/providers/theme-provider";
+import { LanguageProvider } from "@/providers/language-provider";
+import { Preloader } from "@/components/layout/preloader";
+import { CustomCursor } from "@/components/layout/custom-cursor";
+import Navbar from "@/components/layout/navbar";
 import { APP_CONFIG } from "@/lib/constants";
 
 const syne = Syne({ subsets: ["latin"], variable: "--font-syne" });

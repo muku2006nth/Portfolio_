@@ -1,11 +1,11 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
-import { BlurReveal } from "@/components/blur-reveal";
-import { useLanguage } from "@/context/language-context";
+import { BlurReveal } from "@/components/effects/blur-reveal";
+import { useLanguage } from "@/providers/language-provider";
 import { useState } from "react";
-import { AboutModal } from "@/components/about-modal";
-import { HangingProfile } from "@/components/hanging-profile";
+import { AboutModal } from "@/components/modals/about-modal";
+import { HangingProfile } from "@/components/widgets/hanging-profile";
 
 export default function About() {
     const { content } = useLanguage();

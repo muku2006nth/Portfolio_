@@ -7,8 +7,8 @@ import {
 } from "@/components/ui/dialog";
 
 import { useEffect } from "react";
-import { useLenis } from "@/components/smooth-scroll";
-import { useLanguage } from "@/context/language-context";
+import { useLenis } from "@/providers/smooth-scroll-provider";
+import { useLanguage } from "@/providers/language-provider";
 import { Github, ExternalLink } from "lucide-react";
 import Image from "next/image";
 

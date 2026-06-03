@@ -1,7 +1,7 @@
 "use client";
 
-import { useLanguage } from "@/context/language-context";
-import { BlurReveal } from "@/components/blur-reveal";
+import { useLanguage } from "@/providers/language-provider";
+import { BlurReveal } from "@/components/effects/blur-reveal";
 import {
     HoverCard,
     HoverCardContent,

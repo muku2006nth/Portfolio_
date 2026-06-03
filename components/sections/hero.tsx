@@ -2,10 +2,10 @@
 
 import { useRef, useState, useCallback } from "react";
 import { useScroll, useTransform, useMotionTemplate, motion } from "framer-motion";
-import { useLanguage } from "@/context/language-context";
+import { useLanguage } from "@/providers/language-provider";
 import { ArrowRight, Mouse } from "lucide-react";
-import { ContactModal } from "@/components/contact-modal";
-import { InteractiveParticles } from "@/components/3d/interactive-particles";
+import { ContactModal } from "@/components/modals/contact-modal";
+import { InteractiveParticles } from "@/components/effects/interactive-particles";
 
 export default function Hero() {
     const { content } = useLanguage();
