@@ -168,7 +168,7 @@
                 "category": "Media Tool",
                 "year": "2026",
                 "description": "Aether Media is a powerful desktop media converter built with Tauri, supporting video, image and audio format conversions with batch processing.",
-                "image": "/20260427093247885.jpg",
+                "image": "/projects/20260427093247885.jpg",
                 "repo": "https://github.com/xkintaro/aether-media",
                 "stack": [
                     "FFmpeg",
@@ -184,7 +184,7 @@
                 "category": "Library",
                 "year": "2026",
                 "description": "AetherJS is a utility-first JavaScript controller built for modern web applications, minimizing DOM manipulation. Say goodbye to complex state management.",
-                "image": "/20260427093247620.jpg",
+                "image": "/projects/20260427093247620.jpg",
                 "demo": "https://xkintaro.github.io/aether-js-documentation/en.html",
                 "repo": "https://github.com/xkintaro/aether-js",
                 "stack": [
@@ -197,7 +197,7 @@
                 "category": "Web Application",
                 "year": "2025",
                 "description": "Kintaro File Manager is a self-hosted file management application with a cyberpunk-inspired interface. It lets you upload, organize, tag, and filter any type of file through a sleek, modern web interface backed by SQLite — no external database required.",
-                "image": "/20260305210513749.jpg",
+                "image": "/projects/20260305210513749.jpg",
                 "repo": "https://github.com/xkintaro/file-manager",
                 "stack": [
                     "React",
