@@ -1,12 +1,12 @@
 {
     "hero": {
-        "title": "I <span class='highlight-text-primary'>help</span> founders turn <span class='highlight-text-primary'> ideas</span> into seamless digital experiences",
-        "stats": "<span class='highlight-text-tertiary'>Startup</span> Ready Solutions"
+        "title": "I *help* founders turn *ideas* into seamless digital experiences",
+        "stats": "***Startup*** Ready Solutions"
     },
     "about": {
-        "intro": "A developer who grows through <span class='highlight-text-primary'>self-driven projects</span> and turns ideas into <span class='highlight-text-secondary'>real products</span>.",
-        "description": "A <span class='highlight-text-primary'>web development-focused</span> mindset; building on both frontend and backend, learning new technologies through <span class='highlight-text-secondary'>hands-on experimentation</span>, and prioritizing <span class='highlight-text-tertiary'>maintainable code</span>.",
-        "full": "I have been actively involved in software development for the past few years, mostly improving myself through my own projects. Turning an idea into a working product is the part I enjoy the most.<br/><br/>I mainly work in web development. I have built projects using technologies such as React, Next.js, Node.js, Express, and Laravel, working on both frontend and backend. I also gained experience in data management with MongoDB and PostgreSQL. Additionally, I developed desktop applications using C# and WinForms, and more recently started experimenting with lightweight modern desktop apps using Tauri (Rust).<br/><br/>Depending on the need, I also work with different tools. For example, I have built projects involving media processing using FFmpeg. I enjoy exploring new technologies, and I generally believe the best way to learn something is by using it directly.<br/><br/>In my projects, I don't consider it enough for something to just \"work\"; I try to keep things as clean, understandable, and maintainable as possible. When I face a problem, instead of quickly moving on, I prefer to dig into it and understand how it actually works.<br/><br/>My current goal is to work on larger, real-world impactful projects and further improve myself, especially in backend development and system design."
+        "intro": "A developer who grows through *self-driven projects* and turns ideas into **real products**.",
+        "description": "A *web development-focused* mindset; building on both frontend and backend, learning new technologies through **hands-on experimentation**, and prioritizing ***maintainable code***.",
+        "full": "I have been actively involved in software development for the past few years, mostly improving myself through my own projects. Turning an idea into a working product is the part I enjoy the most.\n\nI mainly work in web development. I have built projects using technologies such as React, Next.js, Node.js, Express, and Laravel, working on both frontend and backend. I also gained experience in data management with MongoDB and PostgreSQL. Additionally, I developed desktop applications using C# and WinForms, and more recently started experimenting with lightweight modern desktop apps using Tauri (Rust).\n\nDepending on the need, I also work with different tools. For example, I have built projects involving media processing using FFmpeg. I enjoy exploring new technologies, and I generally believe the best way to learn something is by using it directly.\n\nIn my projects, I don't consider it enough for something to just \"work\"; I try to keep things as clean, understandable, and maintainable as possible. When I face a problem, instead of quickly moving on, I prefer to dig into it and understand how it actually works.\n\nMy current goal is to work on larger, real-world impactful projects and further improve myself, especially in backend development and system design."
     },
     "manifesto": {
         "items": [
@@ -68,7 +68,7 @@
         ]
     },
     "projects": {
-        "intro": "A collection of <span class='highlight-text-primary'>experiments</span>, <span class='highlight-text-primary'>products</span>, and <span class='highlight-text-primary'>digital artifacts</span> forged in the <span class='highlight-text-secondary'>void</span>.",
+        "intro": "A collection of *experiments*, *products*, and *digital artifacts* forged in the **void**.",
         "items": [
             {
                 "id": "1",

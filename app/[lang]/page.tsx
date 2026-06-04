@@ -1,11 +1,11 @@
-import Hero from "@/components/sections/hero";
-import Projects from "@/components/sections/projects";
-import ManifestoFlow from "@/components/effects/manifesto-flow";
-import Stack from "@/components/sections/stack";
-import Roadmap from "@/components/sections/roadmap";
-import About from "@/components/sections/about";
-import Contact from "@/components/sections/contact";
 import ScrollProgress from "@/components/layout/scroll-progress";
+import ManifestoFlow from "@/components/effects/manifesto-flow";
+import Hero from "@/components/sections/hero";
+import About from "@/components/sections/about";
+import Stack from "@/components/sections/stack";
+import Projects from "@/components/sections/projects";
+import Roadmap from "@/components/sections/roadmap";
+import Contact from "@/components/sections/contact";
 
 export default function Home() {
   return (

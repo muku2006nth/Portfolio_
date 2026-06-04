@@ -31,29 +31,69 @@ function deepMerge(target: any, source: any): any {
     return result;
 }
 
-const parseContentWithHtml = (data: any): any => {
-    if (typeof data === "string") {
-        const hasHtml = /<[a-z][\s\S]*>/i.test(data);
+const parseInlineMarkdown = (text: string): React.ReactNode => {
+    const regex = /\*{3}(.+?)\*{3}|\*{2}(.+?)\*{2}|\*(.+?)\*/g;
+    const parts: React.ReactNode[] = [];
+    let lastIndex = 0;
+    let match;
 
-        if (hasHtml) {
+    while ((match = regex.exec(text)) !== null) {
+        if (match.index > lastIndex) {
+            parts.push(text.slice(lastIndex, match.index));
+        }
+
+        if (match[1] !== undefined) {
+            parts.push(<span key={match.index} className="highlight-text-tertiary">{match[1]}</span>);
+        } else if (match[2] !== undefined) {
+            parts.push(<span key={match.index} className="highlight-text-secondary">{match[2]}</span>);
+        } else if (match[3] !== undefined) {
+            parts.push(<span key={match.index} className="highlight-text-primary">{match[3]}</span>);
+        }
+
+        lastIndex = match.index + match[0].length;
+    }
+
+    if (lastIndex < text.length) {
+        parts.push(text.slice(lastIndex));
+    }
+
+    if (parts.length === 0) return text;
+    if (parts.length === 1) return parts[0];
+    return <>{parts}</>;
+};
+
+const parseMarkdownContent = (data: any): any => {
+    if (typeof data === "string") {
+        const hasMarkdown = /\*{1,3}[^*]+\*{1,3}/.test(data) || data.includes('\n\n');
+
+        if (!hasMarkdown) return data;
+
+        const paragraphs = data.split('\n\n');
+
+        if (paragraphs.length > 1) {
             return (
-                <span
-                    key={data}
-                    dangerouslySetInnerHTML={{ __html: data }}
-                />
+                <>
+                    {paragraphs.map((p: string, i: number) => (
+                        <React.Fragment key={i}>
+                            {i > 0 && <><br /><br /></>}
+                            {parseInlineMarkdown(p)}
+                        </React.Fragment>
+                    ))}
+                </>
             );
         }
-        return data;
+
+        return parseInlineMarkdown(data);
     }
 
     if (Array.isArray(data)) {
-        return data.map(parseContentWithHtml);
+        return data.map(parseMarkdownContent);
     }
 
     if (typeof data === "object" && data !== null) {
         const result: any = {};
         for (const key in data) {
-            result[key] = parseContentWithHtml(data[key]);
+            result[key] = parseMarkdownContent(data[key]);
         }
         return result;
     }
@@ -71,7 +111,7 @@ interface LanguageProviderProps {
 export function LanguageProvider({ children, lang, dictionary, contents }: LanguageProviderProps) {
     const processedContent = useMemo(() => {
         const merged = deepMerge(dictionary, contents);
-        return parseContentWithHtml(merged);
+        return parseMarkdownContent(merged);
     }, [dictionary, contents]);
 
     const value = {

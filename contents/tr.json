@@ -1,12 +1,12 @@
 {
     "hero": {
-        "title": "Kurucuların <span class='highlight-text-primary'>fikirlerini</span> sorunsuz dijital deneyimlere dönüştürmelerine <span class='highlight-text-primary'>yardım ediyorum</span>",
-        "stats": "<span class='highlight-text-tertiary'>Startup</span> Uyumlu Çözümler"
+        "title": "Kurucuların *fikirlerini* sorunsuz dijital deneyimlere dönüştürmelerine *yardım ediyorum*",
+        "stats": "***Startup*** Uyumlu Çözümler"
     },
     "about": {
-        "intro": "<span class='highlight-text-primary'>Kendi projeleriyle gelişen</span> ve fikirleri <span class='highlight-text-secondary'>ürüne dönüştüren</span> bir geliştirici.",
-        "description": "<span class='highlight-text-primary'>Web geliştirme odağında</span>; frontend ve backend tarafında üretim yapan, yeni teknolojileri <span class='highlight-text-secondary'>deneyerek öğrenen</span> ve kodun <span class='highlight-text-tertiary'>sürdürülebilir olmasına</span> önem veren bir yaklaşım.",
-        "full": "Yazılımla son birkaç yıldır aktif olarak ilgileniyorum ve bu süreçte çoğunlukla kendi projelerim üzerinden ilerleyerek kendimi geliştirdim. Bir fikri alıp çalışır bir ürüne dönüştürme süreci benim en çok keyif aldığım kısım.<br/><br/>Genel olarak web geliştirme tarafında çalışıyorum. React, Next.js, Node.js, Express ve Laravel gibi teknolojilerle hem frontend hem backend tarafında projeler geliştirdim. MongoDB ve PostgreSQL ile veri yönetimi üzerine deneyim kazandım. Ayrıca C# ve WinForms ile masaüstü uygulamaları geliştirdim, son dönemde ise Tauri (Rust) ile daha hafif ve modern desktop uygulamalar denemeye başladım.<br/><br/>Bunların yanında zaman zaman ihtiyaca göre farklı araçlarla da çalışıyorum. Örneğin FFmpeg kullanarak medya işleme tarafında projeler yaptım. Yeni teknolojileri denemeyi seviyorum ve genelde bir şeyi en iyi öğrenme yolunun doğrudan kullanmak olduğunu düşünüyorum.<br/><br/>Projelerimde sadece \"çalışması\" yeterli gelmiyor; mümkün olduğunca temiz, anlaşılır ve sürdürülebilir olmasına dikkat ediyorum. Bir problemle karşılaştığımda hızlıca geçmek yerine biraz kurcalayıp mantığını çözmeye çalışıyorum.<br/><br/>Şu an hedefim, daha büyük ve gerçek dünya problemlerine dokunan projelerde yer almak ve kendimi özellikle backend ve sistem tasarımı tarafında daha da geliştirmek."
+        "intro": "*Kendi projeleriyle gelişen* ve fikirleri **ürüne dönüştüren** bir geliştirici.",
+        "description": "*Web geliştirme odağında*; frontend ve backend tarafında üretim yapan, yeni teknolojileri **deneyerek öğrenen** ve kodun ***sürdürülebilir olmasına*** önem veren bir yaklaşım.",
+        "full": "Yazılımla son birkaç yıldır aktif olarak ilgileniyorum ve bu süreçte çoğunlukla kendi projelerim üzerinden ilerleyerek kendimi geliştirdim. Bir fikri alıp çalışır bir ürüne dönüştürme süreci benim en çok keyif aldığım kısım.\n\nGenel olarak web geliştirme tarafında çalışıyorum. React, Next.js, Node.js, Express ve Laravel gibi teknolojilerle hem frontend hem backend tarafında projeler geliştirdim. MongoDB ve PostgreSQL ile veri yönetimi üzerine deneyim kazandım. Ayrıca C# ve WinForms ile masaüstü uygulamaları geliştirdim, son dönemde ise Tauri (Rust) ile daha hafif ve modern desktop uygulamalar denemeye başladım.\n\nBunların yanında zaman zaman ihtiyaca göre farklı araçlarla da çalışıyorum. Örneğin FFmpeg kullanarak medya işleme tarafında projeler yaptım. Yeni teknolojileri denemeyi seviyorum ve genelde bir şeyi en iyi öğrenme yolunun doğrudan kullanmak olduğunu düşünüyorum.\n\nProjelerimde sadece \"çalışması\" yeterli gelmiyor; mümkün olduğunca temiz, anlaşılır ve sürdürülebilir olmasına dikkat ediyorum. Bir problemle karşılaştığımda hızlıca geçmek yerine biraz kurcalayıp mantığını çözmeye çalışıyorum.\n\nŞu an hedefim, daha büyük ve gerçek dünya problemlerine dokunan projelerde yer almak ve kendimi özellikle backend ve sistem tasarımı tarafında daha da geliştirmek."
     },
     "manifesto": {
         "items": [
@@ -68,7 +68,7 @@
         ]
     },
     "projects": {
-        "intro": "<span class='highlight-text-primary'>deneyler</span>, <span class='highlight-text-primary'>ürünler</span> ve <span class='highlight-text-primary'>dijital eserlerden</span> oluşan, <span class='highlight-text-secondary'>boşlukta</span> şekillendirilmiş bir koleksiyon.",
+        "intro": "*deneyler*, *ürünler* ve *dijital eserlerden* oluşan, **boşlukta** şekillendirilmiş bir koleksiyon.",
         "items": [
             {
                 "id": "1",
