@@ -12,3 +12,6 @@ export const LOCALE_CONFIG = {
     DEFAULT: "en",
     SUPPORTED: ["en", "tr"] as const,
 } as const;
+
+export const SUPPORTED_LOCALES = LOCALE_CONFIG.SUPPORTED;
+export const DEFAULT_LOCALE = LOCALE_CONFIG.DEFAULT;
