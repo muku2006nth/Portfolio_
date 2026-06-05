@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export function CustomCursor() {
+    const isVisibleRef = useRef(false);
     const [isVisible, setIsVisible] = useState(false);
     const [isHovering, setIsHovering] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
@@ -23,26 +24,35 @@ export function CustomCursor() {
         const moveCursor = (e: MouseEvent) => {
             cursorX.set(e.clientX);
             cursorY.set(e.clientY);
-            if (!isVisible) setIsVisible(true);
+            if (!isVisibleRef.current) {
+                isVisibleRef.current = true;
+                setIsVisible(true);
+            }
+        };
+
+        const isInteractive = (el: HTMLElement): boolean => {
+            const tag = el.tagName.toLowerCase();
+            if (tag === "button" || tag === "a" || tag === "input" || tag === "select" || tag === "textarea") return true;
+            if (el.closest("button") || el.closest("a")) return true;
+            if (el.getAttribute("role") === "button") return true;
+            if (el.classList.contains("cursor-pointer")) return true;
+            if (el.dataset.cursor === "pointer") return true;
+            return false;
         };
 
         const handleMouseOver = (e: MouseEvent) => {
             const target = e.target as HTMLElement;
-            if (
-                target.tagName.toLowerCase() === "button" ||
-                target.tagName.toLowerCase() === "a" ||
-                target.closest("button") ||
-                target.closest("a") ||
-                window.getComputedStyle(target).cursor === "pointer"
-            ) {
-                setIsHovering(true);
-            } else {
-                setIsHovering(false);
-            }
+            setIsHovering(isInteractive(target));
         };
 
-        const handleMouseLeave = () => setIsVisible(false);
-        const handleMouseEnter = () => setIsVisible(true);
+        const handleMouseLeave = () => {
+            isVisibleRef.current = false;
+            setIsVisible(false);
+        };
+        const handleMouseEnter = () => {
+            isVisibleRef.current = true;
+            setIsVisible(true);
+        };
 
         window.addEventListener("mousemove", moveCursor);
         window.addEventListener("mouseover", handleMouseOver);
@@ -55,7 +65,7 @@ export function CustomCursor() {
             document.removeEventListener("mouseleave", handleMouseLeave);
             document.removeEventListener("mouseenter", handleMouseEnter);
         };
-    }, [cursorX, cursorY, isVisible]);
+    }, [cursorX, cursorY]);
 
     if (!isMounted) return null;
 
