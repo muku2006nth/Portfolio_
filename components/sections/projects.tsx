@@ -7,18 +7,7 @@ import { useLanguage } from "@/providers/language-provider";
 import { useMediaQuery, BREAKPOINTS } from "@/hooks/use-media-query";
 import { BlurReveal } from "@/components/effects/blur-reveal";
 import { ProjectModal } from "@/components/modals/project-modal";
-
-type ProjectItem = {
-    id: string;
-    title: string;
-    category: string;
-    year: string;
-    description: string;
-    image: string;
-    demo?: string;
-    repo?: string;
-    stack?: string[];
-};
+import type { ProjectItem } from "@/types/project";
 
 export default function Projects() {
     const { content } = useLanguage();

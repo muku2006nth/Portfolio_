@@ -10,18 +10,7 @@ import { useLenisModal } from "@/hooks/use-lenis-modal";
 import { useLanguage } from "@/providers/language-provider";
 import { Github, ExternalLink } from "lucide-react";
 import Image from "next/image";
-
-interface ProjectItem {
-    id: string;
-    title: string;
-    category: string;
-    year: string;
-    description: string;
-    image: string;
-    demo?: string;
-    repo?: string;
-    stack?: string[];
-}
+import type { ProjectItem } from "@/types/project";
 
 interface ProjectModalProps {
     open: boolean;
