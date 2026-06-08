@@ -222,7 +222,7 @@ export default function WelcomeScreen() {
     color: 'rgba(255,255,255,0.7)',
   }}
 >
-  www.mukunthgopi.vercel.app
+  mukunthportfolio.vercel.app
 </motion.div>
 </motion.div>
         </motion.div>
