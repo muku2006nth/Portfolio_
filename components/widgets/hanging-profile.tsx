@@ -2,8 +2,10 @@
 
 import { useEffect, useRef } from "react";
 import { User } from "lucide-react";
+import { useLanguage } from "@/providers/language-provider";
 
 export function HangingProfile() {
+  const { content } = useLanguage();
   const boxRef = useRef<HTMLDivElement>(null);
   const ropeRef = useRef<SVGLineElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -122,10 +124,10 @@ export function HangingProfile() {
       <div
         ref={boxRef}
         onPointerDown={handlePointerDown}
-        className="absolute top-0 flex flex-col items-center justify-center p-4 w-[140px] rounded-2xl bg-background/40 backdrop-blur-md border border-foreground/10 cursor-grab shadow-2xl select-none group hover:bg-background/60 transition-colors duration-300"
+        className="absolute top-0 flex flex-col items-center justify-center p-5 w-[240px] rounded-2xl bg-background/40 backdrop-blur-md border border-foreground/10 cursor-grab shadow-2xl select-none group hover:bg-background/60 transition-colors duration-300"
         style={{
           left: "50%",
-          marginLeft: "-70px",
+          marginLeft: "-120px",
           transformOrigin: "center top",
           touchAction: "none"
         }}
@@ -133,12 +135,31 @@ export function HangingProfile() {
         <div className="w-20 h-20 rounded-full overflow-hidden border border-foreground/20 mb-3 bg-foreground/5 flex items-center justify-center pointer-events-none group-hover:border-foreground/40 transition-colors duration-300">
           <User className="w-10 h-10 text-foreground/40 group-hover:text-foreground/70 transition-colors duration-300" />
         </div>
-        <div className="flex flex-col items-center gap-1 pointer-events-none">
-          <span className="text-xs font-bold tracking-[0.2em] text-foreground/80">
-            KINTARO
+        <div className="flex flex-col items-center gap-1 pointer-events-none text-center">
+          <span className="text-sm font-bold tracking-[0.1em] text-foreground/90 uppercase">
+            Mukunth
           </span>
-          <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
-            Developer
+          <span className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1">
+            Full-Stack & AI Developer
+          </span>
+        </div>
+
+        <div className="w-full h-px bg-foreground/10 my-4 pointer-events-none" />
+
+        <div className="flex flex-col items-center gap-1 pointer-events-none text-center w-full">
+          <span className="text-xs text-muted-foreground font-medium">
+            {content.about.profile?.education || "SRM IST - CSE"}
+          </span>
+          <span className="text-xs text-muted-foreground">
+            {content.about.profile?.class_info || "Class of 2028 - CGPA 9.0"}
+          </span>
+        </div>
+
+        <div className="w-full h-px bg-foreground/10 my-4 pointer-events-none" />
+
+        <div className="flex flex-col items-center pointer-events-none text-center w-full">
+          <span className="text-xs text-muted-foreground font-medium">
+            {content.about.profile?.location || "Trichy, Tamil Nadu"}
           </span>
         </div>
 

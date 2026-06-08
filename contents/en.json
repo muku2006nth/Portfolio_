@@ -4,18 +4,39 @@
         "stats": "***Startup*** Ready Solutions"
     },
     "about": {
-        "intro": "A developer who grows through *self-driven projects* and turns ideas into **real products**.",
-        "description": "A *web development-focused* mindset; building on both frontend and backend, learning new technologies through **hands-on experimentation**, and prioritizing ***maintainable code***.",
-        "full": "I have been actively involved in software development for the past few years, mostly improving myself through my own projects. Turning an idea into a working product is the part I enjoy the most.\n\nI mainly work in web development. I have built projects using technologies such as React, Next.js, Node.js, Express, and Laravel, working on both frontend and backend. I also gained experience in data management with MongoDB and PostgreSQL. Additionally, I developed desktop applications using C# and WinForms, and more recently started experimenting with lightweight modern desktop apps using Tauri (Rust).\n\nDepending on the need, I also work with different tools. For example, I have built projects involving media processing using FFmpeg. I enjoy exploring new technologies, and I generally believe the best way to learn something is by using it directly.\n\nIn my projects, I don't consider it enough for something to just \"work\"; I try to keep things as clean, understandable, and maintainable as possible. When I face a problem, instead of quickly moving on, I prefer to dig into it and understand how it actually works.\n\nMy current goal is to work on larger, real-world impactful projects and further improve myself, especially in backend development and system design."
+        "title": "About",
+        "intro": "A developer who builds *intelligent systems* and turns ideas into **real products**.",
+        "status": "Open to internship opportunities",
+        "description": "A *full-stack, ML & LLM-focused* builder; shipping **production apps**, **intelligent RAG pipelines**, and **AI security tools** — driven by **hands-on experimentation** and ***scalable thinking***.",
+        "current_work": "Recently shipped **ViGiL.dev**, a deployed AI-powered vulnerability detection system using CodeBERT, ChromaDB, RAG and LLaMA 3. Previously **interned at Senchola Technologies and TrichyCoworks**, shipping a production Android app in Kotlin and automating workflows with n8n.",
+        "skills": ["REACT.JS", "NODE.JS", "PYTHON", "KOTLIN", "FASTAPI", "PYTORCH", "LLM / RAG", "CODEBRT", "AWS", "n8n"],
+        "connect": "CONNECT",
+        "resume": "VIEW RESUME",
+        "resume_link": "https://drive.google.com/file/d/1bvmXs-ALVv7-KFmvVh8BHvIU-Vv8vUBX/view?usp=sharing",
+        "profile": {
+            "name": "Mukunth Gopi",
+            "role": "FULL-STACK & AI DEVELOPER",
+            "education": "SRM IST - Btech.CSE",
+            "class_info": "Current CGPA : 9.0",
+            "location": "Chennai, Tamil Nadu, India"
+        },
+        "full": "I have been actively involved in software development for the past few years, mostly improving myself through my own projects. Turning an idea into a working product is the part I enjoy the most.\n\nI mainly work in web development. I have built projects using technologies such as React, Next.js, Node.js, Express, and Laravel, working on both frontend and backend. I also gained experience in data management with MongoDB and PostgreSQL. Additionally, I developed desktop applications using C# and WinForms, and more recently started experimenting with lightweight modern desktop apps using Tauri (Rust).\n\nDepending on the need, I also work with different tools. For example, I have built projects involving media processing using FFmpeg. I enjoy exploring new technologies, and I generally believe the best way to learn something is by using it directly.\n\nIn my projects, I don't consider it enough for something to just \"work\"; I try to keep things as clean, understandable, and maintainable as possible. When I face a problem, instead of quickly moving on, I prefer to dig into it and understand how it actually works.\n\nMy current goal is to work on larger, real-world impactful projects and further improve myself, especially in backend development and system design.",
+        "metrics": [
+            { "value": "9.0", "label": "CGPA" },
+            { "value": "6+", "label": "PROJECTS" },
+            { "value": "2", "label": "AWS CREDITS" },
+            { "value": "3rd", "label": "YEAR" }
+        ]
     },
     "manifesto": {
         "items": [
-            "RADICAL TRANSPARENCY",
-            "INTENTIONAL MINIMALISM",
-            "ARCHITECTURAL INTEGRITY",
-            "FIRST PRINCIPLES THINKING",
-            "PERFORMANCE WITHOUT COMPROMISE",
-            "SCALABLE VISION"
+            "RADICAL OWNERSHIP",
+            "DELIBERATE MINIMALISM",
+            "STRUCTURAL INTEGRITY",
+            "GROUND UP THINKING",
+            "SPEED WITHOUT SACRIFICE",
+            "VISION THAT SCALES",
+            "SHIP WITH PURPOSE"
         ]
     },
     "stack": {
@@ -23,131 +44,158 @@
             {
                 "title": "Frontend Technologies",
                 "items": [
-                    { "name": "React", "icon": "https://cdn.simpleicons.org/react" },
-                    { "name": "Next.js", "icon": "https://cdn.simpleicons.org/nextdotjs" },
-                    { "name": "Tailwind CSS", "icon": "https://cdn.simpleicons.org/tailwindcss" },
-                    { "name": "Bootstrap", "icon": "https://cdn.simpleicons.org/bootstrap" },
-                    { "name": "Framer Motion", "icon": "https://cdn.simpleicons.org/framer" },
-                    { "name": "TypeScript", "icon": "https://cdn.simpleicons.org/typescript" },
-                    { "name": "JavaScript", "icon": "https://cdn.simpleicons.org/javascript" },
+                    { "name": "React.js", "icon": "https://cdn.simpleicons.org/react" },
+                    { "name": "Angular 20", "icon": "https://cdn.simpleicons.org/angular/white" },
                     { "name": "HTML5", "icon": "https://cdn.simpleicons.org/html5" },
-                    { "name": "CSS3", "icon": "https://www.svgrepo.com/show/452185/css-3.svg" }
+                    { "name": "CSS3", "icon": "" },
+                    { "name": "JavaScript", "icon": "https://cdn.simpleicons.org/javascript" },
+                    { "name": "TypeScript", "icon": "https://cdn.simpleicons.org/typescript" },
+                    { "name": "Tailwind CSS", "icon": "https://cdn.simpleicons.org/tailwindcss" }
                 ]
             },
             {
                 "title": "Backend Technologies",
                 "items": [
                     { "name": "Node.js", "icon": "https://cdn.simpleicons.org/nodedotjs" },
-                    { "name": "PHP", "icon": "https://cdn.simpleicons.org/php" },
-                    { "name": "Laravel", "icon": "https://cdn.simpleicons.org/laravel" },
-                    { "name": "ASP.NET", "icon": "https://cdn.simpleicons.org/dotnet" },
-                    { "name": "Rust", "icon": "https://cdn.simpleicons.org/rust" },
-                    { "name": "C#", "icon": "https://www.svgrepo.com/show/452184/csharp.svg" },
+                    { "name": "Express", "icon": "https://cdn.simpleicons.org/express/white" },
+                    { "name": "FastAPI", "icon": "https://cdn.simpleicons.org/fastapi" },
                     { "name": "Python", "icon": "https://cdn.simpleicons.org/python" },
-                    { "name": "Discord.js", "icon": "https://cdn.simpleicons.org/discord" }
+                    { "name": "Java", "icon": "https://cdn.simpleicons.org/openjdk" }
                 ]
             },
             {
                 "title": "Databases & ORMs",
                 "items": [
-                    { "name": "PostgreSQL", "icon": "https://cdn.simpleicons.org/postgresql" },
                     { "name": "MySQL", "icon": "https://cdn.simpleicons.org/mysql" },
-                    { "name": "MongoDB", "icon": "https://cdn.simpleicons.org/mongodb" },
-                    { "name": "Prisma", "icon": "https://cdn.simpleicons.org/prisma" },
-                    { "name": "Neon", "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/neon-tech.png" }
+                    { "name": "ChromaDB", "icon": "" },
+                    { "name": "PostgreSQL", "icon": "https://cdn.simpleicons.org/postgresql" }
+                ]
+            },
+            {
+                "title": "AI / ML",
+                "items": [
+                    { "name": "PyTorch", "icon": "https://cdn.simpleicons.org/pytorch" },
+                    { "name": "CodeBERT", "icon": "" },
+                    { "name": "LLaMA 3", "icon": "https://cdn.simpleicons.org/meta" },
+                    { "name": "RAG Pipelines", "icon": "" },
+                    { "name": "Hugging Face", "icon": "https://cdn.simpleicons.org/huggingface" }
+                ]
+            },
+            {
+                "title": "Mobile Development",
+                "items": [
+                    { "name": "Kotlin", "icon": "https://cdn.simpleicons.org/kotlin" },
+                    { "name": "Android Studio", "icon": "https://cdn.simpleicons.org/androidstudio" },
+                    { "name": "Android SDK", "icon": "https://cdn.simpleicons.org/android" }
                 ]
             },
             {
                 "title": "Tools & Infrastructure",
                 "items": [
                     { "name": "Git", "icon": "https://cdn.simpleicons.org/git" },
-                    { "name": "Vercel", "icon": "https://cdn.simpleicons.org/vercel" },
-                    { "name": "Tauri", "icon": "https://cdn.simpleicons.org/tauri" }
+                    { "name": "AWS", "icon": "" },
+                    { "name": "Vercel", "icon": "https://cdn.simpleicons.org/vercel/white" },
+                    { "name": "Render", "icon": "https://cdn.simpleicons.org/render/white" },
+                    { "name": "n8n", "icon": "https://cdn.simpleicons.org/n8n" },
+                    { "name": "Android Studio", "icon": "https://cdn.simpleicons.org/androidstudio" }
                 ]
             }
         ]
     },
     "projects": {
-        "intro": "A collection of *experiments*, *products*, and *digital artifacts* forged in the **void**.",
+        "intro": "Real code. Real deployment. A curated set of systems spanning *full-stack web*, *Android*, and *AI* — each one built to solve **something**.",
         "items": [
             {
                 "id": "1",
-                "title": "Aether Media",
-                "category": "Media Tool",
-                "year": "2026",
-                "description": "Aether Media is a powerful desktop media converter built with Tauri, supporting video, image and audio format conversions with batch processing.",
-                "image": "/projects/20260427093247885.jpg",
-                "repo": "https://github.com/xkintaro/aether-media",
-                "stack": ["FFmpeg", "Rust", "Tauri", "React", "TailwindCSS"]
+                "title": "ViGiL.dev",
+                "category": "AI Security",
+                "year": "2024",
+                "description": "A deployed AI-powered vulnerability detection system using CodeBERT, ChromaDB, RAG and LLaMA 3.",
+                "image": "/projects/vigil.png",
+                "demo": "https://vigildev.vercel.app/",
+                "repo": "https://github.com/muku2006nth/CodeGuard-AI-",
+                "stack": ["CodeBERT", "ChromaDB", "LLaMA 3", "RAG"]
             },
             {
                 "id": "2",
-                "title": "Aether JS",
-                "category": "Library",
-                "year": "2026",
-                "description": "AetherJS is a utility-first JavaScript controller built for modern web applications, minimizing DOM manipulation. Say goodbye to complex state management.",
-                "image": "/projects/20260427093247620.jpg",
-                "demo": "https://xkintaro.github.io/aether-js-documentation/en.html",
-                "repo": "https://github.com/xkintaro/aether-js",
-                "stack": ["JavaScript"]
+                "title": "EVAC PLATFORM",
+                "category": "Web Application",
+                "year": "2024",
+                "description": "A comprehensive platform designed to facilitate coordination and management during war-zone evacuation scenarios.",
+                "image": "/projects/EVAC.png",
+                "repo": "https://github.com/chs018/War-zone-evacuation-",
+                "stack": ["React", "Node.js", "MongoDB", "Express"]
             },
             {
                 "id": "3",
-                "title": "File Manager",
+                "title": "FinCheck",
+                "category": "Android App",
+                "year": "2024",
+                "description": "A comprehensive expense tracker mobile application built for Android to help users securely manage their personal finances.",
+                "image": "/projects/FINCHECK.png",
+                "repo": "https://github.com/muku2006nth/Expense-Tracker-Android-Application",
+                "stack": ["Kotlin", "Android SDK", "Firebase"]
+            },
+            {
+                "id": "4",
+                "title": "Trendmeter",
                 "category": "Web Application",
-                "year": "2025",
-                "description": "Kintaro File Manager is a self-hosted file management application with a cyberpunk-inspired interface. It lets you upload, organize, tag, and filter any type of file through a sleek, modern web interface backed by SQLite — no external database required.",
-                "image": "/projects/20260305210513749.jpg",
-                "repo": "https://github.com/xkintaro/file-manager",
-                "stack": ["React", "TailwindCSS", "Node.js", "SQLite"]
+                "year": "2024",
+                "description": "A robust stock chart analyzer designed to track, visualize, and analyze market trends efficiently.",
+                "image": "/projects/Trendmeter.png",
+                "demo": "https://trendmeter.vercel.app/",
+                "repo": "https://github.com/muku2006nth/stock-chart-analyser",
+                "stack": ["React", "Node.js", "TailwindCSS"]
             }
         ]
     },
     "roadmap": {
-        "description": "A roadmap where I share the experiences I've gained throughout my software journey and the technologies I've learned.",
+        "description": "A roadmap of my software journey — the technologies I've learned, the systems I've shipped, and the problems I've solved along the way.",
         "items": [
             {
                 "id": "01",
                 "year": "2022",
-                "description": "I first started programming in high school. In an object-oriented programming course, I learned the fundamentals and logic of programming using C#.",
-                "tags": ["C#"]
+                "description": "Wrote my first lines of code in Python at Care International School, Trichy. Learned the fundamentals of programming logic, object-oriented thinking, and problem solving. The foundation everything else is built on.",
+                "tags": ["Python", "Java", "C", "OOP", "DSA"]
             },
             {
                 "id": "02",
                 "year": "2023",
-                "description": "I began building static and dynamic websites by learning HTML, CSS, and ASP.NET. I also learned how to use databases in my projects.",
-                "tags": ["HTML", "CSS", "ASP.NET", "MySQL"]
+                "description": "Continuing at Care International School, Trichy — moved into web development, building interfaces with HTML, CSS, and JavaScript while learning Python for scripting and automation. First time turning code into something people could actually see and use.",
+                "tags": ["HTML", "CSS", "JavaScript", "Python", "MySQL"]
             },
             {
                 "id": "03",
                 "year": "2024",
-                "description": "It was my final year of high school. I fully improved myself in UI development with CSS and continued writing ASP.NET at the place where I was doing my internship.",
-                "tags": ["HTML", "CSS", "ASP.NET", "MySQL"]
+                "description": "Joined SRM Institute of Science and Technology for B.Tech Computer Science. Completed a summer internship at Trichy Coworks — gaining early exposure to professional work environments, startup culture, and cross-functional collaboration. Continued building foundations in full-stack development alongside.",
+                "tags": ["React.js", "Node.js", "MySQL", "Git", "Java"]
             },
             {
                 "id": "04",
                 "year": "2025",
-                "description": "After graduating from high school, I focused on technologies such as React, Node.js, Tailwind CSS, and MongoDB. During my learning process, I developed many websites and applications. Additionally, I started writing simple tools in Python for my own use.",
-                "tags": ["React", "Node.js", "TailwindCSS", "MongoDB"]
+                "description": "Interned at Senchola Technologies — shipped a production Android app in Kotlin and deployed a workflow automation system using n8n for real business operations. Started exploring AI/ML fundamentals through PyTorch and transformer architectures.",
+                "tags": ["Kotlin", "Android Studio", "n8n", "PyTorch", "FastAPI", "MySQL"]
             },
             {
                 "id": "05",
-                "year": "2026",
-                "description": "I am currently doing an internship at a place called PostAjans. Here, I have focused on Laravel. Additionally, in my free time, I develop websites with Next.js; with the help of AI, even if I do not fully know a language, I create projects using various technologies such as Rust, Tauri, and FFmpeg.",
-                "tags": ["Laravel", "Next.js", "PostgreSQL"]
+                "year": "2026 (Present)",
+                "description": "3rd year at SRM, CGPA 9.0. Built and deployed CodeGuard AI — an AI-powered vulnerability detection system using CodeBERT, ChromaDB, RAG pipelines, and LLaMA 3. Expanding into Angular 20, TypeScript, and cloud infrastructure. Holding AWS Cloud Foundations and AWS ML Foundations certifications. Actively seeking internship roles across Chennai, Bangalore, Hyderabad, Kochi, and remote.",
+                "tags": ["CodeBERT", "ChromaDB", "RAG", "LLaMA 3", "Angular 20", "TypeScript", "AWS", "Vercel", "Render", "FastAPI"]
             }
         ]
     },
     "contact": {
         "description": "Whether we start fresh to bring a project to life or take an existing system further.",
-        "email": "mustafw42@gmail.com",
-        "phone": "Not added yet."
+        "email": "mukunthgopi@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/mukunthgopi",
+        "linkedin_label": "linkedin.com/in/mukunthgopi",
+        "send_email": "SEND AN EMAIL",
+        "direct_line": "CONNECT ON LINKEDIN"
     },
     "social": {
         "title": "SOCIAL",
         "items": [
-            { "label": "GitHub", "href": "https://github.com/xkintaro" },
-            { "label": "Discord", "href": "https://discord.gg/NSQk27Zdkv" }
+            { "label": "GitHub", "href": "https://github.com/muku2006nth" }
         ]
     }
 }

@@ -8,11 +8,13 @@ import { useMediaQuery, BREAKPOINTS } from "@/hooks/use-media-query";
 import { BlurReveal } from "@/components/effects/blur-reveal";
 import { ProjectModal } from "@/components/modals/project-modal";
 import type { ProjectItem } from "@/types/project";
+import { ArrowRight } from "lucide-react";
 
 export default function Projects() {
     const { content } = useLanguage();
 
-    const isDesktop = useMediaQuery(BREAKPOINTS.xl);
+    // Changed to lg instead of xl so the horizontal slider shows up on smaller laptop screens
+    const isDesktop = useMediaQuery(BREAKPOINTS.lg);
 
     const targetRef = useRef<HTMLDivElement>(null);
     const horizontalContainerRef = useRef<HTMLDivElement>(null);
@@ -125,7 +127,7 @@ export default function Projects() {
                         style={{ x: smoothX }}
                         className="flex px-container w-max items-center"
                     >
-                        <div className="w-[60vw] xl:w-[40vw] shrink-0 flex flex-col justify-center">
+                        <div className="w-[60vw] lg:w-[40vw] shrink-0 flex flex-col justify-center">
 
                             <div className="flex flex-col gap-4">
 
@@ -142,17 +144,20 @@ export default function Projects() {
                                 </BlurReveal>
 
                                 <BlurReveal>
-                                    <p className="mt-4 text-5xl font-light leading-tight">
+                                    <p className="mt-4 text-4xl lg:text-5xl font-light leading-tight">
                                         {content.projects.intro}
                                     </p>
                                 </BlurReveal>
 
                                 <BlurReveal>
                                     <div className="mt-12 flex items-center gap-4">
-                                        <div className="h-px w-24 bg-border" />
-                                        <span className="text-sm font-mono text-foreground/40">
+                                        <div className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-foreground/5">
+                                            <div className="h-1.5 w-1.5 rounded-full bg-foreground/60 animate-bounce" />
+                                        </div>
+                                        <span className="text-sm font-mono tracking-widest uppercase text-foreground/40">
                                             {content.projects.scroll_text}
                                         </span>
+                                        <ArrowRight className="w-4 h-4 text-foreground/40 animate-pulse" />
                                     </div>
                                 </BlurReveal>
 
@@ -191,7 +196,7 @@ const ProjectCard = React.memo(({ project, onClick }: { project: ProjectItem; on
         <BlurReveal>
             <div
                 onClick={onClick}
-                className="group relative w-full xl:w-[45vw] aspect-4/3 shrink-0 xl:mx-6 perspective-1000 cursor-pointer"
+                className="group relative w-full lg:w-[45vw] aspect-4/3 shrink-0 lg:mx-6 perspective-1000 cursor-pointer"
             >
                 <div className="relative w-full h-full overflow-hidden bg-muted border border-border/50 transition-all duration-700 ease-out group-hover:border-foreground/20">
                     <div className="absolute inset-0 z-0">
@@ -199,28 +204,28 @@ const ProjectCard = React.memo(({ project, onClick }: { project: ProjectItem; on
                             src={project.image}
                             alt={project.title}
                             fill
-                            sizes="(max-width: 1280px) 100vw, 45vw"
+                            sizes="(max-width: 1024px) 100vw, 45vw"
                             loading="lazy"
                             className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 grayscale group-hover:grayscale-0"
                         />
                         <div className="absolute inset-0 bg-linear-to-t from-background via-background/40 to-transparent" />
                     </div>
 
-                    <div className="absolute inset-0 z-10 flex flex-col justify-between p-6 xl:p-12">
+                    <div className="absolute inset-0 z-10 flex flex-col justify-between p-6 lg:p-12">
                         <div className="flex justify-between items-start">
                             <div className="overflow-hidden">
-                                <span className="block text-xs xl:text-sm font-mono tracking-widest text-muted-foreground uppercase transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 delay-100">
+                                <span className="block text-xs lg:text-sm font-mono tracking-widest text-muted-foreground uppercase transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 delay-100">
                                     {project.category}
                                 </span>
                             </div>
                             <div className="overflow-hidden">
-                                <span className="block text-xs xl:text-sm font-mono text-muted-foreground transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 delay-200">
+                                <span className="block text-xs lg:text-sm font-mono text-muted-foreground transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 delay-200">
                                     {project.year}
                                 </span>
                             </div>
                         </div>
 
-                        <h3 className="absolute bottom-6 xl:bottom-12 left-6 xl:left-12 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter uppercase text-foreground opacity-10 group-hover:opacity-100 transition-opacity duration-500 delay-100 pointer-events-none">
+                        <h3 className="absolute bottom-6 lg:bottom-12 left-6 lg:left-12 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter uppercase text-foreground opacity-10 group-hover:opacity-100 transition-opacity duration-500 delay-100 pointer-events-none">
                             {project.title}
                         </h3>
                     </div>

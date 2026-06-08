@@ -4,150 +4,198 @@
         "stats": "***Startup*** Uyumlu Çözümler"
     },
     "about": {
-        "intro": "*Kendi projeleriyle gelişen* ve fikirleri **ürüne dönüştüren** bir geliştirici.",
-        "description": "*Web geliştirme odağında*; frontend ve backend tarafında üretim yapan, yeni teknolojileri **deneyerek öğrenen** ve kodun ***sürdürülebilir olmasına*** önem veren bir yaklaşım.",
-        "full": "Yazılımla son birkaç yıldır aktif olarak ilgileniyorum ve bu süreçte çoğunlukla kendi projelerim üzerinden ilerleyerek kendimi geliştirdim. Bir fikri alıp çalışır bir ürüne dönüştürme süreci benim en çok keyif aldığım kısım.\n\nGenel olarak web geliştirme tarafında çalışıyorum. React, Next.js, Node.js, Express ve Laravel gibi teknolojilerle hem frontend hem backend tarafında projeler geliştirdim. MongoDB ve PostgreSQL ile veri yönetimi üzerine deneyim kazandım. Ayrıca C# ve WinForms ile masaüstü uygulamaları geliştirdim, son dönemde ise Tauri (Rust) ile daha hafif ve modern desktop uygulamalar denemeye başladım.\n\nBunların yanında zaman zaman ihtiyaca göre farklı araçlarla da çalışıyorum. Örneğin FFmpeg kullanarak medya işleme tarafında projeler yaptım. Yeni teknolojileri denemeyi seviyorum ve genelde bir şeyi en iyi öğrenme yolunun doğrudan kullanmak olduğunu düşünüyorum.\n\nProjelerimde sadece \"çalışması\" yeterli gelmiyor; mümkün olduğunca temiz, anlaşılır ve sürdürülebilir olmasına dikkat ediyorum. Bir problemle karşılaştığımda hızlıca geçmek yerine biraz kurcalayıp mantığını çözmeye çalışıyorum.\n\nŞu an hedefim, daha büyük ve gerçek dünya problemlerine dokunan projelerde yer almak ve kendimi özellikle backend ve sistem tasarımı tarafında daha da geliştirmek."
+        "title": "Hakkımda",
+        "intro": "*Akıllı sistemler* geliştiren ve fikirleri **gerçek ürünlere** dönüştüren bir geliştirici.",
+        "status": "Staj fırsatlarına açık",
+        "description": "Tam yığın (*full-stack*), *ML ve LLM odaklı* bir geliştirici; **üretim kalitesinde uygulamalar**, **akıllı RAG sistemleri** ve **yapay zeka güvenlik araçları** geliştiriyor — **uygulamalı deneyimler** ve ***ölçeklenebilir düşünce yapısıyla*** hareket ediyor.",
+        "current_work": "Yakın zamanda CodeBERT, ChromaDB, RAG ve LLaMA 3 kullanarak canlıya alınan yapay zeka destekli güvenlik açığı tespit sistemi olan **ViGiL.dev**'i tamamladı. Daha önce **Senchola Technologies ve TrichyCoworks'te stajyer olarak** Kotlin ile bir Android uygulamasını canlıya aldı ve n8n ile iş akışlarını otomatize etti.",
+        "skills": ["REACT.JS", "NODE.JS", "PYTHON", "KOTLIN", "FASTAPI", "PYTORCH", "LLM / RAG", "CODEBRT", "AWS", "n8n"],
+        "connect": "BAĞLAN",
+        "resume": "ÖZGEÇMİŞ GÖR",
+        "resume_link": "https://drive.google.com/file/d/1bvmXs-ALVv7-KFmvVh8BHvIU-Vv8vUBX/view?usp=sharing",
+        "profile": {
+            "name": "Mukunth Gopi",
+            "role": "FULL-STACK & AI DEVELOPER",
+            "education": "SRM IST - Btech.CSE",
+            "class_info": "Güncel GNO : 9.0",
+            "location": "Chennai, Tamil Nadu, Hindistan"
+        },
+        "full": "Yazılımla son birkaç yıldır aktif olarak ilgileniyorum ve bu süreçte çoğunlukla kendi projelerim üzerinden ilerleyerek kendimi geliştirdim. Bir fikri alıp çalışır bir ürüne dönüştürme süreci benim en çok keyif aldığım kısım.\n\nGenel olarak web geliştirme tarafında çalışıyorum. React, Next.js, Node.js, Express ve Laravel gibi teknolojilerle hem frontend hem backend tarafında projeler geliştirdim. MongoDB ve PostgreSQL ile veri yönetimi üzerine deneyim kazandım. Ayrıca C# ve WinForms ile masaüstü uygulamaları geliştirdim, son dönemde ise Tauri (Rust) ile daha hafif ve modern desktop uygulamalar denemeye başladım.\n\nBunların yanında zaman zaman ihtiyaca göre farklı araçlarla da çalışıyorum. Örneğin FFmpeg kullanarak medya işleme tarafında projeler yaptım. Yeni teknolojileri denemeyi seviyorum ve genelde bir şeyi en iyi öğrenme yolunun doğrudan kullanmak olduğunu düşünüyorum.\n\nProjelerimde sadece \"çalışması\" yeterli gelmiyor; mümkün olduğunca temiz, anlaşılır ve sürdürülebilir olmasına dikkat ediyorum. Bir problemle karşılaştığımda hızlıca geçmek yerine biraz kurcalayıp mantığını çözmeye çalışıyorum.\n\nŞu an hedefim, daha büyük ve gerçek dünya problemlerine dokunan projelerde yer almak ve kendimi özellikle backend ve sistem tasarımı tarafında daha da geliştirmek.",
+        "metrics": [
+            { "value": "9.0", "label": "GNO" },
+            { "value": "6+", "label": "PROJE" },
+            { "value": "2", "label": "AWS KREDİSİ" },
+            { "value": "3.", "label": "SINIF" }
+        ]
     },
     "manifesto": {
         "items": [
-            "RADICAL TRANSPARENCY",
-            "INTENTIONAL MINIMALISM",
-            "ARCHITECTURAL INTEGRITY",
-            "FIRST PRINCIPLES THINKING",
-            "PERFORMANCE WITHOUT COMPROMISE",
-            "SCALABLE VISION"
+            "RADICAL OWNERSHIP",
+            "DELIBERATE MINIMALISM",
+            "STRUCTURAL INTEGRITY",
+            "GROUND UP THINKING",
+            "SPEED WITHOUT SACRIFICE",
+            "VISION THAT SCALES",
+            "SHIP WITH PURPOSE"
         ]
     },
     "stack": {
         "items": [
             {
-                "title": "Frontend",
+                "title": "Frontend Teknolojileri",
                 "items": [
-                    { "name": "React", "icon": "https://cdn.simpleicons.org/react" },
-                    { "name": "Next.js", "icon": "https://cdn.simpleicons.org/nextdotjs" },
-                    { "name": "Tailwind CSS", "icon": "https://cdn.simpleicons.org/tailwindcss" },
-                    { "name": "Bootstrap", "icon": "https://cdn.simpleicons.org/bootstrap" },
-                    { "name": "Framer Motion", "icon": "https://cdn.simpleicons.org/framer" },
-                    { "name": "TypeScript", "icon": "https://cdn.simpleicons.org/typescript" },
-                    { "name": "JavaScript", "icon": "https://cdn.simpleicons.org/javascript" },
+                    { "name": "React.js", "icon": "https://cdn.simpleicons.org/react" },
+                    { "name": "Angular 20", "icon": "https://cdn.simpleicons.org/angular/white" },
                     { "name": "HTML5", "icon": "https://cdn.simpleicons.org/html5" },
-                    { "name": "CSS3", "icon": "https://www.svgrepo.com/show/452185/css-3.svg" }
+                    { "name": "CSS3", "icon": "" },
+                    { "name": "JavaScript", "icon": "https://cdn.simpleicons.org/javascript" },
+                    { "name": "TypeScript", "icon": "https://cdn.simpleicons.org/typescript" },
+                    { "name": "Tailwind CSS", "icon": "https://cdn.simpleicons.org/tailwindcss" }
                 ]
             },
             {
-                "title": "Backend",
+                "title": "Backend Teknolojileri",
                 "items": [
                     { "name": "Node.js", "icon": "https://cdn.simpleicons.org/nodedotjs" },
-                    { "name": "PHP", "icon": "https://cdn.simpleicons.org/php" },
-                    { "name": "Laravel", "icon": "https://cdn.simpleicons.org/laravel" },
-                    { "name": "ASP.NET", "icon": "https://cdn.simpleicons.org/dotnet" },
-                    { "name": "Rust", "icon": "https://cdn.simpleicons.org/rust" },
-                    { "name": "C#", "icon": "https://www.svgrepo.com/show/452184/csharp.svg" },
+                    { "name": "Express", "icon": "https://cdn.simpleicons.org/express/white" },
+                    { "name": "FastAPI", "icon": "https://cdn.simpleicons.org/fastapi" },
                     { "name": "Python", "icon": "https://cdn.simpleicons.org/python" },
-                    { "name": "Discord.js", "icon": "https://cdn.simpleicons.org/discord" }
+                    { "name": "Java", "icon": "https://cdn.simpleicons.org/openjdk" }
                 ]
             },
             {
-                "title": "Databases & ORMs",
+                "title": "Veritabanları ve ORM'ler",
                 "items": [
-                    { "name": "PostgreSQL", "icon": "https://cdn.simpleicons.org/postgresql" },
                     { "name": "MySQL", "icon": "https://cdn.simpleicons.org/mysql" },
-                    { "name": "MongoDB", "icon": "https://cdn.simpleicons.org/mongodb" },
-                    { "name": "Prisma", "icon": "https://cdn.simpleicons.org/prisma" },
-                    { "name": "Neon", "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/neon-tech.png" }
+                    { "name": "ChromaDB", "icon": "" },
+                    { "name": "PostgreSQL", "icon": "https://cdn.simpleicons.org/postgresql" }
                 ]
             },
             {
-                "title": "Tools & Infrastructure",
+                "title": "Yapay Zeka / Makine Öğrenimi",
+                "items": [
+                    { "name": "PyTorch", "icon": "https://cdn.simpleicons.org/pytorch" },
+                    { "name": "CodeBERT", "icon": "" },
+                    { "name": "LLaMA 3", "icon": "https://cdn.simpleicons.org/meta" },
+                    { "name": "RAG Pipelines", "icon": "" },
+                    { "name": "Hugging Face", "icon": "https://cdn.simpleicons.org/huggingface" }
+                ]
+            },
+            {
+                "title": "Mobil Geliştirme",
+                "items": [
+                    { "name": "Kotlin", "icon": "https://cdn.simpleicons.org/kotlin" },
+                    { "name": "Android Studio", "icon": "https://cdn.simpleicons.org/androidstudio" },
+                    { "name": "Android SDK", "icon": "https://cdn.simpleicons.org/android" }
+                ]
+            },
+            {
+                "title": "Araçlar ve Altyapı",
                 "items": [
                     { "name": "Git", "icon": "https://cdn.simpleicons.org/git" },
-                    { "name": "Vercel", "icon": "https://cdn.simpleicons.org/vercel" },
-                    { "name": "Tauri", "icon": "https://cdn.simpleicons.org/tauri" }
+                    { "name": "AWS", "icon": "" },
+                    { "name": "Vercel", "icon": "https://cdn.simpleicons.org/vercel/white" },
+                    { "name": "Render", "icon": "https://cdn.simpleicons.org/render/white" },
+                    { "name": "n8n", "icon": "https://cdn.simpleicons.org/n8n" },
+                    { "name": "Android Studio", "icon": "https://cdn.simpleicons.org/androidstudio" }
                 ]
             }
         ]
     },
     "projects": {
-        "intro": "*deneyler*, *ürünler* ve *dijital eserlerden* oluşan, **boşlukta** şekillendirilmiş bir koleksiyon.",
+        "intro": "Real code. Real deployment. A curated set of systems spanning *full-stack web*, *Android*, and *AI* — each one built to solve **something**.",
         "items": [
             {
                 "id": "1",
-                "title": "Aether Media",
-                "category": "Medya Aracı",
-                "year": "2026",
-                "description": "Aether Media, Tauri ile geliştirilmiş güçlü bir masaüstü medya dönüştürücüsüdür. Toplu işlem desteğiyle video, görsel ve ses format dönüşümlerini destekler.",
-                "image": "/20260427093247885.jpg",
-                "repo": "https://github.com/xkintaro/aether-media",
-                "stack": ["FFmpeg", "Rust", "Tauri", "React", "TailwindCSS"]
+                "title": "ViGiL.dev",
+                "category": "AI Security",
+                "year": "2024",
+                "description": "A deployed AI-powered vulnerability detection system using CodeBERT, ChromaDB, RAG and LLaMA 3.",
+                "image": "/projects/vigil.png",
+                "demo": "https://vigildev.vercel.app/",
+                "repo": "https://github.com/muku2006nth/CodeGuard-AI-",
+                "stack": ["CodeBERT", "ChromaDB", "LLaMA 3", "RAG"]
             },
             {
                 "id": "2",
-                "title": "Aether JS",
-                "category": "Kütüphane",
-                "year": "2026",
-                "description": "AetherJS, modern web uygulamaları için geliştirilmiş, DOM manipülasyonunu en aza indiren utility-first bir JavaScript kontrolcüsüdür. Karmaşık state yönetimine veda edin.",
-                "image": "/20260427093247620.jpg",
-                "demo": "https://xkintaro.github.io/aether-js-documentation/en.html",
-                "repo": "https://github.com/xkintaro/aether-js",
-                "stack": ["JavaScript"]
+                "title": "EVAC PLATFORM",
+                "category": "Web Application",
+                "year": "2024",
+                "description": "A comprehensive platform designed to facilitate coordination and management during war-zone evacuation scenarios.",
+                "image": "/projects/EVAC.png",
+                "repo": "https://github.com/chs018/War-zone-evacuation-",
+                "stack": ["React", "Node.js", "MongoDB", "Express"]
             },
             {
                 "id": "3",
-                "title": "File Manager",
-                "category": "Web Uygulaması",
-                "year": "2025",
-                "description": "Kintaro File Manager, cyberpunk esintili arayüze sahip, self-hosted bir dosya yönetim uygulamasıdır. SQLite destekli modern ve şık bir web arayüzü üzerinden her tür dosyayı yüklemenize, düzenlemenize, etiketlemenize ve filtrelemenize olanak tanır — harici bir veritabanı gerekmez.",
-                "image": "/20260305210513749.jpg",
-                "repo": "https://github.com/xkintaro/file-manager",
-                "stack": ["React", "TailwindCSS", "Node.js", "SQLite"]
+                "title": "FinCheck",
+                "category": "Android App",
+                "year": "2024",
+                "description": "A comprehensive expense tracker mobile application built for Android to help users securely manage their personal finances.",
+                "image": "/projects/FINCHECK.png",
+                "repo": "https://github.com/muku2006nth/Expense-Tracker-Android-Application",
+                "stack": ["Kotlin", "Android SDK", "Firebase"]
+            },
+            {
+                "id": "4",
+                "title": "Trendmeter",
+                "category": "Web Application",
+                "year": "2024",
+                "description": "A robust stock chart analyzer designed to track, visualize, and analyze market trends efficiently.",
+                "image": "/projects/Trendmeter.png",
+                "demo": "https://trendmeter.vercel.app/",
+                "repo": "https://github.com/muku2006nth/stock-chart-analyser",
+                "stack": ["React", "Node.js", "TailwindCSS"]
             }
         ]
     },
     "roadmap": {
-        "description": "Yazılım yolculuğum boyunca edindiğim tecrübeleri ve öğrendiğim teknolojileri paylaştığım bir yol haritası.",
+        "description": "A roadmap of my software journey — the technologies I've learned, the systems I've shipped, and the problems I've solved along the way.",
         "items": [
             {
                 "id": "01",
                 "year": "2022",
-                "description": "Yazılıma ilk defa lisede başladım. Nesne tabanlı programlama dersinde, C# kullanarak programlamanın temellerini ve mantığını öğrendim.",
-                "tags": ["C#"]
+                "description": "Wrote my first lines of code in Python at Care International School, Trichy. Learned the fundamentals of programming logic, object-oriented thinking, and problem solving. The foundation everything else is built on.",
+                "tags": ["Python", "Java", "C", "OOP", "DSA"]
             },
             {
                 "id": "02",
                 "year": "2023",
-                "description": "HTML, CSS ve ASP.NET öğrenerek statik ve dinamik web siteleri yapmaya başladım. Ayrıca projelerimde veritabanı kullanmayı da öğrendim.",
-                "tags": ["HTML", "CSS", "ASP.NET", "MySQL"]
+                "description": "Continuing at Care International School, Trichy — moved into web development, building interfaces with HTML, CSS, and JavaScript while learning Python for scripting and automation. First time turning code into something people could actually see and use.",
+                "tags": ["HTML", "CSS", "JavaScript", "Python", "MySQL"]
             },
             {
                 "id": "03",
                 "year": "2024",
-                "description": "Lisedeki son yılımdı. CSS ile arayüz kodlama konusunda kendimi tamamen geliştirdim ve staj yaptığım yerde ASP.NET yazmaya devam ediyordum.",
-                "tags": ["HTML", "CSS", "ASP.NET", "MySQL"]
+                "description": "Joined SRM Institute of Science and Technology for B.Tech Computer Science. Completed a summer internship at Trichy Coworks — gaining early exposure to professional work environments, startup culture, and cross-functional collaboration. Continued building foundations in full-stack development alongside.",
+                "tags": ["React.js", "Node.js", "MySQL", "Git", "Java"]
             },
             {
                 "id": "04",
                 "year": "2025",
-                "description": "Lise bittikten sonra React, Node.js, Tailwind CSS ve MongoDB gibi teknolojilere yöneldim. Öğrenme sürecimde birçok web sitesi ve uygulama geliştirdim. Ek olarak, Python ile kendi kullanımım için basit araçlar da yazmaya başladım.",
-                "tags": ["React", "Node.js", "TailwindCSS", "MongoDB"]
+                "description": "Interned at Senchola Technologies — shipped a production Android app in Kotlin and deployed a workflow automation system using n8n for real business operations. Started exploring AI/ML fundamentals through PyTorch and transformer architectures.",
+                "tags": ["Kotlin", "Android Studio", "n8n", "PyTorch", "FastAPI", "MySQL"]
             },
             {
                 "id": "05",
-                "year": "2026",
-                "description": "Şu an PostAjans adında bir yerde staj yapıyorum. Burada Laravel üzerine yoğunlaştım. Ek olarak, boş zamanlarımda Next.js ile web siteleri geliştiriyor; yapay zekânın da yardımıyla, bir dili tamamen bilmesem de Rust, Tauri ve FFmpeg gibi çeşitli teknolojilerle projeler üretiyorum.",
-                "tags": ["Laravel", "Next.js", "PostgreSQL"]
+                "year": "2026 (Present)",
+                "description": "3rd year at SRM, CGPA 9.0. Built and deployed CodeGuard AI — an AI-powered vulnerability detection system using CodeBERT, ChromaDB, RAG pipelines, and LLaMA 3. Expanding into Angular 20, TypeScript, and cloud infrastructure. Holding AWS Cloud Foundations and AWS ML Foundations certifications. Actively seeking internship roles across Chennai, Bangalore, Hyderabad, Kochi, and remote.",
+                "tags": ["CodeBERT", "ChromaDB", "RAG", "LLaMA 3", "Angular 20", "TypeScript", "AWS", "Vercel", "Render", "FastAPI"]
             }
         ]
     },
     "contact": {
         "description": "İster bir projeyi hayata geçirmek için yeni bir başlangıç yapalım, ister mevcut bir sistemi daha ileri taşıyalım.",
-        "email": "mustafw42@gmail.com",
-        "phone": "Henüz eklenmedi."
+        "email": "mukunthgopi@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/mukunthgopi",
+        "linkedin_label": "linkedin.com/in/mukunthgopi",
+        "send_email": "E-POSTA GÖNDER",
+        "direct_line": "LINKEDIN'DE BAĞLAN"
     },
     "social": {
         "title": "SOCIAL",
         "items": [
-            { "label": "GitHub", "href": "https://github.com/xkintaro" },
-            { "label": "Discord", "href": "https://discord.gg/NSQk27Zdkv" }
+            { "label": "GitHub", "href": "https://github.com/muku2006nth" }
         ]
     }
 }

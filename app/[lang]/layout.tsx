@@ -4,7 +4,7 @@ import "../globals.css";
 import SmoothScroll from "@/providers/smooth-scroll-provider";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { LanguageProvider } from "@/providers/language-provider";
-import { Preloader } from "@/components/layout/preloader";
+import WelcomeScreen from "@/components/ui/WelcomeScreen";
 import { CustomCursor } from "@/components/layout/custom-cursor";
 import Navbar from "@/components/layout/navbar";
 import { APP_CONFIG } from "@/lib/constants";
@@ -52,7 +52,7 @@ export default async function LangLayout({
             enableSystem={false}
           >
             <CustomCursor />
-            <Preloader />
+            <WelcomeScreen />
             <SmoothScroll>
               <Navbar />
               {children}

@@ -87,7 +87,7 @@ export function Preloader() {
                             <div className="absolute inset-3 rounded-full border border-border/50 bg-secondary/5 backdrop-blur-md" />
 
                             <img
-                                src="/favicon.ico"
+                                src="/logo.png"
                                 alt="Logo"
                                 className="w-14 h-14 object-contain z-10"
                             />

@@ -53,9 +53,11 @@ export default function Stack() {
                                         <HoverCard key={item.name} openDelay={50} closeDelay={50}>
                                             <HoverCardTrigger asChild>
                                                 <div className="group flex items-center gap-3 py-2.5 px-1 shrink-0 cursor-default">
-                                                    <div className="transition-all duration-500 ease-out opacity-50 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110">
-                                                        <img src={item.icon} alt={item.name} width={20} height={20} />
-                                                    </div>
+                                                    {item.icon && (
+                                                        <div className="transition-all duration-500 ease-out opacity-50 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110">
+                                                            <img src={item.icon} alt={item.name} width={20} height={20} />
+                                                        </div>
+                                                    )}
                                                     <span className="text-sm tracking-wide text-muted-foreground transition-colors duration-500 ease-out group-hover:text-foreground">
                                                         {item.name}
                                                     </span>
@@ -69,9 +71,11 @@ export default function Stack() {
                                                 <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary/50 to-transparent" />
                                                 <div className="absolute inset-0 bg-linear-to-tr from-foreground/5 to-transparent pointer-events-none" />
 
-                                                <div className="relative p-3 rounded-xl bg-secondary/50 ring-1 ring-border/50 shadow-inner group-hover:scale-110 transition-transform duration-500">
-                                                    <img src={item.icon} alt={item.name} width={36} height={36} className="drop-shadow-lg" />
-                                                </div>
+                                                {item.icon && (
+                                                    <div className="relative p-3 rounded-xl bg-secondary/50 ring-1 ring-border/50 shadow-inner group-hover:scale-110 transition-transform duration-500">
+                                                        <img src={item.icon} alt={item.name} width={36} height={36} className="drop-shadow-lg" />
+                                                    </div>
+                                                )}
                                                 <div className="flex flex-col items-center justify-center gap-1 z-10">
                                                     <span className="text-sm font-bold tracking-[0.15em] uppercase text-foreground">
                                                         {item.name}

@@ -1,12 +1,12 @@
 "use client";
 
 import { useRef, useState, useCallback } from "react";
-import Image from "next/image";
 import { useScroll, useTransform, useMotionTemplate, motion } from "framer-motion";
 import { useLanguage } from "@/providers/language-provider";
 import { ArrowRight, Mouse } from "lucide-react";
 import { ContactModal } from "@/components/modals/contact-modal";
 import { InteractiveParticles } from "@/components/effects/interactive-particles";
+import IdCard from "@/components/effects/id-card";
 
 export default function Hero() {
     const { content } = useLanguage();
@@ -19,26 +19,6 @@ export default function Hero() {
     const y = useTransform(scrollY, [0, 800], [0, -150]);
     const blurValue = useTransform(scrollY, [0, 800], [0, 10]);
     const filter = useMotionTemplate`blur(${blurValue}px)`;
-    const track1 = [
-        "/hero-slider/makise-kurisu-2.webp",
-        "/hero-slider/atam-1.webp",
-        "/hero-slider/kintaro-2.webp",
-        "/hero-slider/makise-kurisu-1.webp",
-        "/hero-slider/atam-2.webp",
-        "/hero-slider/kintaro-1.webp"
-    ];
-
-    const track2 = [
-        "/hero-slider/kintaro-1.webp",
-        "/hero-slider/atam-2.webp",
-        "/hero-slider/makise-kurisu-1.webp",
-        "/hero-slider/kintaro-2.webp",
-        "/hero-slider/atam-1.webp",
-        "/hero-slider/makise-kurisu-2.webp"
-    ];
-
-    const col1Images = [...track1, ...track1];
-    const col2Images = [...track2, ...track2];
 
     const scrollToProjects = useCallback(() => {
         const projectsSection = document.getElementById("projects");
@@ -55,67 +35,13 @@ export default function Hero() {
         >
             <InteractiveParticles />
 
-            <motion.div
-                style={{ opacity }}
-                className="absolute top-0 right-6 sm:right-12 md:right-16 lg:right-24 xl:right-36 2xl:right-48 bottom-0 h-full w-55 sm:w-65 md:w-85 lg:w-100 xl:w-110 2xl:w-120 flex gap-3 sm:gap-4 px-2 overflow-hidden z-5 pointer-events-none select-none opacity-[0.22] dark:opacity-[0.28] mix-blend-luminosity"
-            >
-                <div className="max-md:hidden flex-1 h-full overflow-hidden relative">
-                    <motion.div
-                        animate={{ y: ["0%", "-50%"] }}
-                        transition={{
-                            ease: "linear",
-                            duration: 32,
-                            repeat: Infinity
-                        }}
-                        className="flex flex-col gap-3 sm:gap-4 pt-4"
-                    >
-                        {col1Images.map((src, idx) => (
-                            <div key={idx} className="w-full aspect-3/4 relative overflow-hidden rounded-4xl border border-border/5">
-                                <Image
-                                    src={src}
-                                    alt="Portrait"
-                                    fill
-                                    sizes="(max-width: 640px) 50vw, (max-width: 1280px) 25vw, 15vw"
-                                    loading="lazy"
-                                    className="object-cover object-center grayscale contrast-[1.08] brightness-[0.8]"
-                                />
-                            </div>
-                        ))}
-                    </motion.div>
-                </div>
-
-                <div className="max-md:opacity-50 flex-1 h-full overflow-hidden relative">
-                    <motion.div
-                        animate={{ y: ["-50%", "0%"] }}
-                        transition={{
-                            ease: "linear",
-                            duration: 32,
-                            repeat: Infinity
-                        }}
-                        className="flex flex-col gap-3 sm:gap-4 pt-4"
-                    >
-                        {col2Images.map((src, idx) => (
-                            <div key={idx} className="w-full aspect-3/4 relative overflow-hidden rounded-4xl border border-border/5">
-                                <Image
-                                    src={src}
-                                    alt="Portrait"
-                                    fill
-                                    sizes="(max-width: 640px) 90vw, (max-width: 1280px) 25vw, 15vw"
-                                    loading="lazy"
-                                    className="object-cover object-center grayscale contrast-[1.08] brightness-[0.8]"
-                                />
-                            </div>
-                        ))}
-                    </motion.div>
-                </div>
-
-                <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-background pointer-events-none z-10" />
-                <div className="absolute inset-0 bg-linear-to-r from-background via-transparent to-transparent pointer-events-none z-10" />
-            </motion.div>
+            <div className="absolute inset-0 z-10">
+                <IdCard />
+            </div>
 
             <motion.div
                 style={{ opacity, scale, y, filter }}
-                className="relative z-20 flex-1 flex flex-col gap-6 sm:gap-12 xl:gap-16 justify-end w-full h-full will-change-[opacity,transform,filter]"
+                className="relative z-20 flex-1 flex flex-col gap-6 sm:gap-12 xl:gap-16 justify-end w-full h-full will-change-[opacity,transform,filter] pointer-events-none"
             >
 
                 <div className="flex justify-between items-start w-full">
@@ -147,7 +73,7 @@ export default function Hero() {
                 <div className="w-full mt-auto flex flex-col justify-center relative z-20 mix-blend-difference">
                     <div className="overflow-hidden">
                         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[140px] font-black tracking-tighter leading-[0.85] text-foreground uppercase whitespace-nowrap">
-                            Kintaro
+                            Mukunth
                             <br />
                             <span className="text-foreground/80">
                                 Portfolio
@@ -161,7 +87,7 @@ export default function Hero() {
                         {content.about.description}
                     </p>
 
-                    <div className="flex flex-col sm:flex-row flex-wrap sm:items-center gap-4">
+                    <div className="flex flex-col sm:flex-row flex-wrap sm:items-center gap-4 pointer-events-auto">
                         <button
                             onClick={() => setContactOpen(true)}
                             className="w-fit group relative flex h-12 xl:h-16 cursor-pointer items-center justify-center overflow-hidden rounded-full border border-border/50 bg-foreground px-6 xl:px-10 text-background transition-all duration-500 ease-out hover:bg-background hover:border-foreground/30 hover:text-foreground shadow-2xl hover:-translate-y-0.5"

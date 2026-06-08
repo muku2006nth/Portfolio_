@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence, useScroll, useTransform, useMotionTemplate } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import LanguageSwitcher from "@/components/widgets/language-switcher";
 import ThemeSwitcher from "@/components/widgets/theme-switcher";
 import { useLanguage } from "@/providers/language-provider";
 import { useLenis } from "@/providers/smooth-scroll-provider";
@@ -139,7 +138,7 @@ export default function Navbar() {
           className="relative z-[110] flex items-center gap-2 group"
         >
           <span className="text-xl sm:text-2xl font-black tracking-tighter uppercase text-foreground transition-all duration-300 group-hover:opacity-70">
-            kintaro
+            mukunth gopi
           </span>
         </Link>
 
@@ -158,21 +157,19 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-
-          <div className="flex items-center gap-3">
-            <LanguageSwitcher />
-            <ThemeSwitcher />
-          </div>
         </div>
 
-        <div className="flex xl:hidden items-center gap-4">
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="relative z-[110] p-2 text-foreground focus:outline-none"
-            aria-label="Toggle Menu"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+        <div className="flex items-center gap-4">
+          <ThemeSwitcher />
+          <div className="flex xl:hidden items-center">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="relative z-[110] p-2 text-foreground focus:outline-none"
+              aria-label="Toggle Menu"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </motion.nav>
 
@@ -220,10 +217,6 @@ export default function Navbar() {
                 transition={{ delay: 0.5 }}
                 className="mt-8 flex items-center justify-between"
               >
-                <div className="flex items-center gap-4">
-                  <LanguageSwitcher />
-                  <ThemeSwitcher />
-                </div>
               </motion.div>
             </div>
           </motion.div>

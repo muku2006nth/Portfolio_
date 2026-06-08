@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/dialog";
 
 import { useLanguage } from "@/providers/language-provider";
-import { ArrowUpRight, Mail, Phone } from "lucide-react";
+import { ArrowUpRight, Mail, Linkedin } from "lucide-react";
 import { useLenisModal } from "@/hooks/use-lenis-modal";
 
 interface ContactModalProps {
@@ -51,14 +51,16 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
                         </a>
 
                         <a
-                            href={`tel:${content.contact.phone.replace(/\s+/g, '')}`}
+                            href={content.contact.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="group flex items-center gap-4 px-5 py-2.5 rounded-full border border-border/50 bg-secondary/20 backdrop-blur-sm hover:bg-foreground hover:border-foreground/30 transition-all duration-500 ease-out"
                         >
                             <div className="w-8 h-8 rounded-full border border-border/50 bg-background flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-background transition-transform duration-500">
-                                <Phone className="w-3.5 h-3.5 text-foreground" />
+                                <Linkedin className="w-3.5 h-3.5 text-foreground" />
                             </div>
                             <span className="text-foreground tracking-wide font-medium text-sm group-hover:text-background transition-colors duration-500">
-                                {content.contact.phone}
+                                {content.contact.linkedin_label}
                             </span>
                         </a>
                     </div>
