@@ -50,7 +50,7 @@ export default function IdCard() {
     
     const timer = setTimeout(() => {
       setShowScene(true);
-    }, 2200);
+    }, 4400);
 
     return () => {
       window.removeEventListener('resize', check);
