@@ -41,12 +41,21 @@ function CameraRig() {
 
 export default function IdCard() {
   const [isMobile, setIsMobile] = useState(false);
+  const [showScene, setShowScene] = useState(false);
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768);
     check();
     window.addEventListener('resize', check);
-    return () => window.removeEventListener('resize', check);
+    
+    const timer = setTimeout(() => {
+      setShowScene(true);
+    }, 2200);
+
+    return () => {
+      window.removeEventListener('resize', check);
+      clearTimeout(timer);
+    };
   }, []);
 
   return (
@@ -74,7 +83,7 @@ export default function IdCard() {
         <CameraRig />
         <ambientLight intensity={Math.PI} />
 
-        <Scene isMobile={isMobile} />
+        {showScene && <Scene isMobile={isMobile} />}
 
         <Environment blur={0.75}>
           <Lightformer
