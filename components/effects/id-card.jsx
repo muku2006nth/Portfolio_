@@ -174,6 +174,11 @@ function Band({ isMobile, maxSpeed = 50, minSpeed = 10 }) {
   photoTexture.wrapT = THREE.RepeatWrapping;
   photoTexture.needsUpdate = true;
   const { width, height } = useThree((state) => state.size);
+  const viewport = useThree((state) => state.viewport);
+
+  // Responsive position: anchor to the right side of the screen
+  const rightEdge = 0.5 + viewport.width / 2;
+  const xPos = Math.min(3, rightEdge - 1.5);
 
   const [curve] = useState(
     () =>
@@ -270,7 +275,7 @@ function Band({ isMobile, maxSpeed = 50, minSpeed = 10 }) {
 
   return (
     <>
-      <group position={[3, 4, 0]}>
+      <group position={[xPos, 4, 0]}>
         <RigidBody ref={fixed} {...segmentProps} type="fixed" />
         <RigidBody position={[0.5, 15, 0]} ref={j1} {...segmentProps}><BallCollider args={[0.1]} /></RigidBody>
         <RigidBody position={[1, 15, 0]} ref={j2} {...segmentProps}><BallCollider args={[0.1]} /></RigidBody>
