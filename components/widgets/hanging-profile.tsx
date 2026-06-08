@@ -41,7 +41,7 @@ export function HangingProfile() {
 
         const dy = Math.max(state.current.dragY, 10);
 
-        let targetAngle = Math.atan2(dx, dy);
+        const targetAngle = Math.atan2(dx, dy);
         let targetLength = Math.sqrt(dx * dx + dy * dy);
 
         if (targetLength > ropeLength) {

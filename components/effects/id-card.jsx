@@ -128,8 +128,7 @@ function Scene({ isMobile }) {
       gravity={[0, -40, 0]}
       timeStep={1 / 60}
     >
-      {/* hanya desktop */}
-      {!isMobile && <Band isMobile={isMobile} />}
+      <Band isMobile={isMobile} />
     </Physics>
   );
 }
