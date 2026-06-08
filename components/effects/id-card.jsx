@@ -176,9 +176,9 @@ function Band({ isMobile, maxSpeed = 50, minSpeed = 10 }) {
   const { width, height } = useThree((state) => state.size);
   const viewport = useThree((state) => state.viewport);
 
-  // Responsive position: anchor to the right side of the screen
+  // Responsive position: anchor to the right side of the screen for desktop, center for mobile
   const rightEdge = 0.5 + viewport.width / 2;
-  const xPos = Math.min(3, rightEdge - 1.5);
+  const xPos = isMobile ? 0.5 : Math.min(3, rightEdge - 1.5);
 
   const [curve] = useState(
     () =>
