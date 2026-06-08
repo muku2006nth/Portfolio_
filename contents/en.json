@@ -60,7 +60,7 @@
                     { "name": "Express", "icon": "https://cdn.simpleicons.org/express/white" },
                     { "name": "FastAPI", "icon": "https://cdn.simpleicons.org/fastapi" },
                     { "name": "Python", "icon": "https://cdn.simpleicons.org/python" },
-                    { "name": "Java", "icon": "https://cdn.simpleicons.org/openjdk/white" }
+                    { "name": "Java", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" }
                 ]
             },
             {
