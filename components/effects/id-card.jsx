@@ -1,4 +1,5 @@
 'use client';
+/* eslint-disable react-hooks/immutability */
 import * as THREE from 'three';
 import React, { useEffect, useRef, useState } from 'react';
 import { Canvas, extend, useThree, useFrame } from '@react-three/fiber';

@@ -160,7 +160,6 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <ThemeSwitcher />
           <div className="flex xl:hidden items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -170,6 +169,7 @@ export default function Navbar() {
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
+          <ThemeSwitcher />
         </div>
       </motion.nav>
 

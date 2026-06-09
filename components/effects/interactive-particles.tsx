@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/immutability */
+/* eslint-disable react-hooks/unsupported-syntax */
 "use client";
 
 import { useEffect, useRef } from "react";

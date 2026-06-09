@@ -227,7 +227,11 @@ const ProjectCard = React.memo(({ project, onClick }: { project: ProjectItem; on
                             </div>
                         </div>
 
-                        <h3 className="absolute bottom-6 lg:bottom-12 left-6 lg:left-12 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter uppercase text-foreground opacity-10 group-hover:opacity-100 transition-opacity duration-500 delay-100 pointer-events-none">
+                        <h3 className={`absolute bottom-6 lg:bottom-12 left-6 lg:left-12 font-black tracking-tighter uppercase text-foreground opacity-10 group-hover:opacity-100 transition-opacity duration-500 delay-100 pointer-events-none ${
+                            project.title.toLowerCase() === 'trendmeter' 
+                            ? 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl' 
+                            : 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl'
+                        }`}>
                             {project.title}
                         </h3>
                     </div>
