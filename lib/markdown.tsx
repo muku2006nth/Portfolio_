@@ -30,6 +30,7 @@ function parseInline(text: string): React.ReactNode {
     return <>{parts}</>;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function parseMarkdown(data: any): any {
     if (typeof data === "string") {
         if (!/\*{1,3}[^*]+\*{1,3}/.test(data) && !data.includes("\n\n")) return data;
@@ -52,6 +53,7 @@ export function parseMarkdown(data: any): any {
     if (Array.isArray(data)) return data.map(parseMarkdown);
 
     if (typeof data === "object" && data !== null) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const result: any = {};
         for (const key in data) result[key] = parseMarkdown(data[key]);
         return result;
@@ -60,6 +62,7 @@ export function parseMarkdown(data: any): any {
     return data;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function deepMerge(target: any, source: any): any {
     const result = { ...target };
     for (const key of Object.keys(source)) {

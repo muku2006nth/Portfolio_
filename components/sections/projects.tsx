@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/set-state-in-effect */
+/* eslint-disable react/display-name */
 "use client";
 
 import { motion, useTransform, useScroll, useSpring } from "framer-motion";

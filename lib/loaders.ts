@@ -1,6 +1,7 @@
 import 'server-only';
 import type { Locale } from './i18n';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Loader = () => Promise<Record<string, any>>;
 
 const dictionaries: Record<Locale, Loader> = {

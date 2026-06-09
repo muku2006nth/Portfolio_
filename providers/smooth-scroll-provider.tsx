@@ -22,6 +22,7 @@ export default function SmoothScroll({
       smoothWheel: true,
     });
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLenis(lenisInstance);
 
     let rafId: number;

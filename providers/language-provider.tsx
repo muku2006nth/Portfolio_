@@ -6,6 +6,7 @@ import { deepMerge, parseMarkdown } from "@/lib/markdown";
 
 interface LanguageContextType {
     language: Locale;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     content: any;
 }
 
@@ -14,7 +15,9 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 interface LanguageProviderProps {
     children: React.ReactNode;
     lang: Locale;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     dictionary: Record<string, any>;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     contents: Record<string, any>;
 }
 

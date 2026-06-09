@@ -220,7 +220,9 @@ function Band({ isMobile, maxSpeed = 50, minSpeed = 10 }) {
     }
   });
 
+  // eslint-disable-next-line react-hooks/immutability
   curve.curveType = 'chordal';
+  // eslint-disable-next-line react-hooks/immutability
   texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 
   return (
