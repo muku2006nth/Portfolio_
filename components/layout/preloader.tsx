@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import { useState, useEffect } from "react";
@@ -10,7 +9,7 @@ export function Preloader() {
     const { theme } = useTheme();
 
     useEffect(() => {
-        setIsLoading(true);
+        setTimeout(() => setIsLoading(true), 0);
 
         const timer = setTimeout(() => {
             setIsLoading(false);
@@ -87,6 +86,7 @@ export function Preloader() {
 
                             <div className="absolute inset-3 rounded-full border border-border/50 bg-secondary/5 backdrop-blur-md" />
 
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                                 src="/logo.png"
                                 alt="Logo"

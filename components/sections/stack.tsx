@@ -55,6 +55,7 @@ export default function Stack() {
                                                 <div className="group flex items-center gap-3 py-2.5 px-1 shrink-0 cursor-default">
                                                     {item.icon && (
                                                         <div className="transition-all duration-500 ease-out opacity-50 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110">
+                                                            {/* eslint-disable-next-line @next/next/no-img-element */}
                                                             <img src={item.icon} alt={item.name} width={20} height={20} />
                                                         </div>
                                                     )}
@@ -73,6 +74,7 @@ export default function Stack() {
 
                                                 {item.icon && (
                                                     <div className="relative p-3 rounded-xl bg-secondary/50 ring-1 ring-border/50 shadow-inner group-hover:scale-110 transition-transform duration-500">
+                                                        {/* eslint-disable-next-line @next/next/no-img-element */}
                                                         <img src={item.icon} alt={item.name} width={36} height={36} className="drop-shadow-lg" />
                                                     </div>
                                                 )}
