@@ -28,6 +28,15 @@
             { "value": "3.", "label": "SINIF" }
         ]
     },
+    "mastering": {
+        "items": [
+            { "id": "01", "title": "Veri Yapıları ve Algoritmalar" },
+            { "id": "02", "title": "Full Stack Geliştirme" },
+            { "id": "03", "title": "Yapay Zeka" },
+            { "id": "04", "title": "Sistem Tasarımı" }
+        ],
+        "github_username": "muku2006nth"
+    },
     "manifesto": {
         "items": [
             "RADICAL OWNERSHIP",

@@ -5,7 +5,8 @@
         "stack": "Stack",
         "projects": "Projects",
         "roadmap": "Roadmap",
-        "contact": "Contact"
+        "contact": "Contact",
+        "resume": "Resume"
     },
     "hero": {
         "cta_primary": "Connect",
@@ -15,6 +16,11 @@
     "about": {
         "title": "About",
         "cta": "Read Full Version"
+    },
+    "mastering": {
+        "title": "Currently Mastering",
+        "github_title": "Git Developer Cycle",
+        "commits_text": "COMMITS THIS YEAR"
     },
     "stack": {
         "title": "STACK"

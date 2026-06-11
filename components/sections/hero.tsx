@@ -44,29 +44,9 @@ export default function Hero() {
                 className="relative z-20 flex-1 flex flex-col gap-4 sm:gap-8 xl:gap-10 2xl:gap-16 justify-end w-full h-full will-change-[opacity,transform,filter] pointer-events-none"
             >
 
-                <div className="flex justify-between items-start w-full">
-
-                    <div className="text-4xl sm:text-6xl text-foreground/10 grunge-text rotate-90 pointer-events-none select-none">
+                <div className="w-full">
+                    <div className="text-4xl sm:text-6xl text-foreground/10 grunge-text rotate-90 pointer-events-none select-none w-fit">
                     {"////"}
-                    </div>
-
-                    <div className="flex flex-col items-center gap-4">
-                        <div className="w-px h-12 bg-border relative overflow-hidden">
-                            <motion.div
-                                className="absolute top-0 left-0 w-full h-1/2 bg-foreground"
-                                animate={{
-                                    y: ["0%", "100%", "0%"]
-                                }}
-                                transition={{
-                                    duration: 2.5,
-                                    repeat: Infinity,
-                                    ease: "easeInOut"
-                                }}
-                            />
-                        </div>
-                        <span className="text-[9px] font-mono tracking-[0.3em] uppercase text-muted-foreground [writing-mode:vertical-lr]">
-                            SCROLL
-                        </span>
                     </div>
                 </div>
 
@@ -113,6 +93,29 @@ export default function Hero() {
                     </div>
                 </div>
 
+            </motion.div>
+
+            <motion.div 
+                style={{ opacity }}
+                className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-1.5 pointer-events-none mix-blend-difference"
+            >
+                <span className="text-[8px] sm:text-[9px] font-semibold tracking-[0.25em] uppercase text-muted-foreground">
+                    Scroll to explore
+                </span>
+                <div className="w-[14px] h-[24px] rounded-full border-[1px] border-muted-foreground/60 flex justify-center pt-1">
+                    <motion.div
+                        className="w-[3px] h-[5px] rounded-full bg-blue-500"
+                        animate={{
+                            y: [0, 8, 0],
+                            opacity: [1, 0, 1]
+                        }}
+                        transition={{
+                            duration: 1.5,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                        }}
+                    />
+                </div>
             </motion.div>
 
             <ContactModal open={contactOpen} onOpenChange={setContactOpen} />

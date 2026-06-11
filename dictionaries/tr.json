@@ -5,7 +5,8 @@
         "stack": "Teknolojiler",
         "projects": "Projeler",
         "roadmap": "Yol Haritası",
-        "contact": "İletişim"
+        "contact": "İletişim",
+        "resume": "Özgeçmiş"
     },
     "hero": {
         "cta_primary": "İletişim",
@@ -15,6 +16,11 @@
     "about": {
         "title": "Hakkımda",
         "cta": "Tamamını Oku"
+    },
+    "mastering": {
+        "title": "Şu An Uzmanlaşılanlar",
+        "github_title": "Git Geliştirici Döngüsü",
+        "commits_text": "BU YILKİ COMMITLER"
     },
     "stack": {
         "title": "Teknolojiler"

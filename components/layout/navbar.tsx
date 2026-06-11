@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence, useScroll, useTransform, useMotionTemplate } from "framer-motion";
-import { Menu, X } from "lucide-react";
+
 import ThemeSwitcher from "@/components/widgets/theme-switcher";
 import { useLanguage } from "@/providers/language-provider";
 import { useLenis } from "@/providers/smooth-scroll-provider";
@@ -11,7 +11,6 @@ import { useLenis } from "@/providers/smooth-scroll-provider";
 export default function Navbar() {
   const { content } = useLanguage();
   const lenis = useLenis();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [screenWidth, setScreenWidth] = useState(1920);
   const [containerWidth, setContainerWidth] = useState(1280);
   const [scrollHeight, setScrollHeight] = useState(800);
@@ -62,23 +61,7 @@ export default function Navbar() {
     }
   }, []);
 
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-      document.documentElement.style.overflow = "hidden";
-      lenis?.stop();
-    } else {
-      document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
-      lenis?.start();
-    }
 
-    return () => {
-      document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
-      lenis?.start();
-    };
-  }, [isMobileMenuOpen, lenis]);
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -86,7 +69,6 @@ export default function Navbar() {
     const elem = document.getElementById(targetId);
 
     if (elem || targetId === "home") {
-      setIsMobileMenuOpen(false);
 
       setTimeout(() => {
         if (lenis) {
@@ -135,17 +117,17 @@ export default function Navbar() {
         <Link
           href="#home"
           onClick={(e) => scrollToSection(e, "#home")}
-          className="relative z-[110] flex items-center gap-2 group"
+          className="relative z-[110] flex items-center gap-2 group shrink-0 mr-4 sm:mr-8"
         >
           <span className="text-xl sm:text-2xl font-black tracking-tighter uppercase text-foreground transition-all duration-300 group-hover:opacity-70">
             mukunth gopi
           </span>
         </Link>
 
-        <div className="hidden xl:flex items-center gap-8">
-          <ul className="flex items-center gap-6">
+        <div className="flex items-center overflow-x-auto no-scrollbar flex-1 justify-center mr-4 lg:mr-8">
+          <ul className="flex items-center gap-4 lg:gap-6">
             {navLinks.map((link) => (
-              <li key={link.name}>
+              <li key={link.name} className="shrink-0">
                 <Link
                   href={link.href}
                   onClick={(e) => scrollToSection(e, link.href)}
@@ -159,69 +141,19 @@ export default function Navbar() {
           </ul>
         </div>
 
-        <div className="flex items-center gap-4">
-          <div className="flex xl:hidden items-center">
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="relative z-[110] p-2 text-foreground focus:outline-none"
-              aria-label="Toggle Menu"
-            >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+        <div className="flex items-center gap-3 sm:gap-6 shrink-0">
+          <Link
+            href="https://drive.google.com/file/d/1bvmXs-ALVv7-KFmvVh8BHvIU-Vv8vUBX/view?usp=sharing"
+            target="_blank"
+            className="shrink-0 inline-flex items-center justify-center rounded-xl bg-primary px-5 py-2 text-sm font-bold uppercase tracking-wider text-primary-foreground transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 shadow-md shadow-primary/20"
+          >
+            {content.nav.resume}
+          </Link>
           <ThemeSwitcher />
         </div>
       </motion.nav>
 
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[90] bg-background xl:hidden flex flex-col h-[100dvh] w-screen"
-          >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(var(--primary-rgb),0.05),transparent)] pointer-events-none" />
-            <div className="absolute inset-0 bg-grid-white/[0.02] pointer-events-none" />
 
-            <div className="flex flex-col flex-1 pt-24 sm:pt-32 pb-24 sm:pb-12 px-container overflow-y-auto relative z-10">
-              <ul className="flex flex-col gap-6 sm:gap-8">
-                {navLinks.map((link, i) => (
-                  <motion.li
-                    key={link.name}
-                    initial={{ opacity: 0, x: -30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{
-                      delay: 0.1 + (i * 0.05),
-                      duration: 0.5,
-                      ease: [0.22, 1, 0.36, 1]
-                    }}
-                  >
-                    <Link
-                      href={link.href}
-                      onClick={(e) => scrollToSection(e, link.href)}
-                      className="group flex items-baseline"
-                    >
-                      <span className="text-4xl font-black tracking-tighter uppercase text-foreground transition-all duration-300 group-hover:pl-4 group-hover:text-primary">
-                        {link.name}
-                      </span>
-                    </Link>
-                  </motion.li>
-                ))}
-              </ul>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="mt-8 flex items-center justify-between"
-              >
-              </motion.div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </motion.header>
   );
 }

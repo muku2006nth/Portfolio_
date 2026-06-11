@@ -28,6 +28,15 @@
             { "value": "3rd", "label": "YEAR" }
         ]
     },
+    "mastering": {
+        "items": [
+            { "id": "01", "title": "Data Structures & Algorithms" },
+            { "id": "02", "title": "Full Stack Development" },
+            { "id": "03", "title": "Artificial Intelligence" },
+            { "id": "04", "title": "System Design" }
+        ],
+        "github_username": "muku2006nth"
+    },
     "manifesto": {
         "items": [
             "RADICAL OWNERSHIP",
