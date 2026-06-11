@@ -171,6 +171,7 @@ const TextType = ({
   const shouldHideCursor =
     hideCursorWhileTyping && (currentCharIndex < textArray[currentTextIndex].length || isDeleting);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const Component: any = as;
 
   return (

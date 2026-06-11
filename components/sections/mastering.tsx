@@ -5,10 +5,13 @@ import { BlurReveal } from "@/components/effects/blur-reveal";
 import { BookOpen, Activity } from "lucide-react";
 import { GitHubCalendar } from "react-github-calendar";
 import { useTheme } from "next-themes";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 export default function Mastering() {
     const { content } = useLanguage();
     const { resolvedTheme } = useTheme();
+    const isMobile = useMediaQuery("(max-width: 768px)");
+    const isTablet = useMediaQuery("(max-width: 1024px)");
 
     if (!content.mastering) return null;
 
@@ -59,21 +62,24 @@ export default function Mastering() {
                         </BlurReveal>
 
                         <BlurReveal delay={0.2}>
-                            <div className="p-6 rounded-2xl border border-border/50 bg-foreground/[0.02] w-full flex justify-center">
-                                <GitHubCalendar 
-                                    username={content.mastering.github_username || "muku2006nth"} 
-                                    colorScheme={resolvedTheme === 'dark' ? 'dark' : 'light'}
-                                    theme={{
-                                        light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
-                                        dark: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'],
-                                    }}
-                                    labels={{
-                                        totalCount: `{{count}} ${content.mastering.commits_text}`
-                                    }}
-                                    blockSize={10}
-                                    blockMargin={3}
-                                    fontSize={12}
-                                />
+                            <div className="p-4 sm:p-6 rounded-2xl border border-border/50 bg-foreground/[0.02] w-full flex justify-center overflow-hidden">
+                                <div className="max-w-full overflow-hidden flex justify-center scale-x-100">
+                                    <GitHubCalendar 
+                                        username={content.mastering.github_username || "muku2006nth"} 
+                                        colorScheme={resolvedTheme === 'dark' ? 'dark' : 'light'}
+                                        theme={{
+                                            light: ['#ebedf0', '#e4e4e7', '#d4d4d8', '#a1a1aa', '#71717a'],
+                                            dark: ['#161b22', '#27272a', '#3f3f46', '#52525b', '#71717a'],
+                                        }}
+                                        labels={{
+                                            totalCount: `{{count}} ${content.mastering.commits_text}`
+                                        }}
+                                        blockSize={isMobile ? 7 : (isTablet ? 9 : 12)}
+                                        blockMargin={isMobile ? 2 : 4}
+                                        fontSize={isMobile ? 10 : 12}
+                                        blockRadius={2}
+                                    />
+                                </div>
                             </div>
                         </BlurReveal>
                     </div>
