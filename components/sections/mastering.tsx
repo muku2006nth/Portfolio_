@@ -68,8 +68,8 @@ export default function Mastering() {
                                         username={content.mastering.github_username || "muku2006nth"} 
                                         colorScheme={resolvedTheme === 'dark' ? 'dark' : 'light'}
                                         theme={{
-                                            light: ['#ebedf0', '#e4e4e7', '#d4d4d8', '#a1a1aa', '#71717a'],
-                                            dark: ['#161b22', '#27272a', '#3f3f46', '#52525b', '#71717a'],
+                                            light: ['#ebedf0', '#d4d4d8', '#a1a1aa', '#71717a', '#18181b'],
+                                            dark: ['#161b22', '#3f3f46', '#71717a', '#a1a1aa', '#ffffff'],
                                         }}
                                         labels={{
                                             totalCount: `{{count}} ${content.mastering.commits_text}`
